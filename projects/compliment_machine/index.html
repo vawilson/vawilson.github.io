@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-navbar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+<body>
+
+
+<!-- Navbar -->
+<div class="w3-top">
+
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium">
+    <ul class="w3-navbar w3-left-align w3-large w3-black">
+
+    </ul>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center  w3-padding-128">
+  <a href="https://github.com/chsahit/ComplimentMachine">
+    <img src="/projects/compliment_machine/static/img/github.png" alt="Github" style="width:50;height:50px;padding-right:1200px;border:0;">
+  </a>
+  <h1 class="w3-margin  w3-hide-small w3-jumbo">Compliment Machine</h1>
+  <h1 class="w3-margin  w3-hide-large w3-hide-medium">Compliment Machine</h1>
+
+   <button class="w3-btn w3-round-large w3-grey w3-padding-16 w3-large w3-margin-top" onclick="upload()">
+       Upload A Photo</button>
+
+    <form enctype="multipart/form-data" action="/upload" method="post">
+       <input type="file" id="my_img" style="display: none;">
+    </form>
+   <script>
+       <input id="myFileInput" type="file" accept="image/*;capture=camera">
+
+var myInput = document.getElementById('myFileInput');
+
+function sendPic() {
+    var file = myInput.files[0];
+
+    // Send file here either by adding it to a `FormData` object
+    // and sending that via XHR, or by simply passing the file into
+    // the `send` method of an XHR instance.
+}
+
+myInput.addEventListener('change', sendPic, false);
+    </script>
+
+
+
+</header>
+
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-16 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Machine Learning Driven Compliments</h1>
+      <h5 class="w3-padding-32"> By combining Clarifai API and Natural Language Toolkit we have perfected a machine learning solution to the world's most pressing question: "How does this selfie look?"</h5>
+    </div>
+
+    <div class="w3-third w3-center w3-">
+      <img src = "/projects/compliment_machine/static/img/cam.png">
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+
+
+
+<!-- Footer -->
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
