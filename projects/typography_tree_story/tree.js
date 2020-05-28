@@ -37,7 +37,7 @@ svg.append('g')
 .call(d3.axisLeft(yScale).ticks(50).tickFormat(d3.format("d")));
 
 
-
+text_dict = {};
 // load the external data
 d3.csv("./treedata.csv").then(function(data) {
 
@@ -108,6 +108,12 @@ function update(source,num) {
 	// links
 	var links = treeRoot.links();
 	//create scale
+	//update text dict
+  nodes.forEach(function(d){
+  text = d.data.text;
+	name = d.data.name;
+	text_dict[name] = text;
+  });
 
 	// Normalize for fixed-depth.
 	nodes.forEach(function(d) {

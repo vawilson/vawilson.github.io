@@ -1,7 +1,7 @@
 start_y = 7750;
 var w = $(document).width();
 var points_svg = d3.select("body").append("svg")
-.attr('width',1280)
+.attr('width',1098)
 .attr('height',800)
 .attr("transform", "translate(15,7900)")
 .attr("class", "points");
