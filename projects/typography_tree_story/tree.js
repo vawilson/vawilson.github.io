@@ -1,7 +1,7 @@
 
 screen_width = $(document).width();
-tree_width = screen_width-270;
-screen_height = 8000;
+tree_width = screen_width-400;
+screen_height = 9000;
 tree_height = screen_height-200;
 var i = 0;
 
@@ -15,12 +15,12 @@ var diagonal = d3.linkVertical()
 .y(function(d) { return d.y; });
 
 var svg = d3.select("body").append("svg")
-.attr("width",tree_width+90)
+.attr("width",tree_width+195)
 .attr('class','tree')
 .attr("height", screen_height)
 .attr('id','svg')
 .append("g")
-.attr("transform", "translate(-40,0)");
+.attr("transform", "translate(-60,0)");
 
 var div = d3.select("body").append("div")
 .attr("class", "tooltip")
@@ -29,12 +29,15 @@ var div = d3.select("body").append("div")
 
 var yScale = d3.scaleLinear()
 .domain([1440,2020])
-.range([510,tree_height]);
+.range([710,tree_height]);
 //create axis
 svg.append('g')
-.attr('class', 'y axis')
+.attr('class', 'y-axis')
+.style('font-family','Helvetica')
+.style('font-size','11')
+.style('stroke-width','2px')
 .attr('transform', 'translate(100,0)')
-.call(d3.axisLeft(yScale).ticks(50).tickFormat(d3.format("d")));
+.call(d3.axisLeft(yScale).ticks(50).tickFormat(d3.format("d")).tickPadding(6));
 
 
 text_dict = {};
@@ -112,7 +115,9 @@ function update(source,num) {
   nodes.forEach(function(d){
   text = d.data.text;
 	name = d.data.name;
-	text_dict[name] = text;
+	title = d.data.title;
+	h_movement = d.data.historical_movement
+	text_dict[name] = [text,h_movement];
   });
 
 	// Normalize for fixed-depth.
@@ -120,7 +125,7 @@ function update(source,num) {
 		d.y = yScale(d.data.year);
 	}
 );
-nodes.forEach(function(d) { d.x = d.x +50 ; });
+nodes.forEach(function(d) { d.x = d.x +150 ; });
 
 
 // Declare the nodesâ€¦
@@ -162,7 +167,25 @@ var node = svg.selectAll("g.node")
 	});
 
 	nodeEnter.append("text")
-	.attr("dx", 12)
+	.attr("dx",function(d){
+  if( d.data.name === "Didone Serif"){
+  return -100;
+	}
+	else if (d.data.name === "Transitional-Serif") {
+   return -105;
+	}
+	else if (d.data.name === "Scotch Roman"  ) {
+		return -93;
+	}
+	else if ( d.data.name === "Serif" ) {
+		return -38;
+	}
+
+	else{
+		return 12;
+	}
+
+	})
 	.attr("dy", ".35em")
 
 	.text(function(d){

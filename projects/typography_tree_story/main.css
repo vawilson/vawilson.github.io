@@ -6,9 +6,7 @@ body {
   font-family: GreatVibes;
   src: url(GreatVibes-Regular.ttf);
 }
-.points {
 
-}
 
 .pic_leg {
   position: absolute;
@@ -17,6 +15,10 @@ body {
 }
 .legendRadius {
   fill: "black";
+}
+p{
+    font-family: Helvetica;
+    font-size: 14;
 }
 h1 {
   font-family: Helvetica;
@@ -52,7 +54,7 @@ ul{
   top: 35%;
   font-size: 18px;
 }
-p {
+#p1 {
   font-family: Helvetica;
   margin-top: 50;
   padding-left: 200px;
@@ -84,7 +86,8 @@ h3 {
 .legend {
   position:absolute;
   right:0;
-  bottom:0;
+  top:0;
+
 
 
 }
@@ -118,7 +121,7 @@ h3 {
 .os {
   position:absolute;
   fill: 'white';
-  top: 8000px;
+  top: 8300px;
   left:0;
 }
 .script {

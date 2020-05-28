@@ -1,13 +1,14 @@
-start_y = 7750;
+
+
+start_y = 7350;
 var w = $(document).width();
 var points_svg = d3.select("body").append("svg")
-.attr('width',1098)
+.attr('width',1168)
+.style('opacity',1)
 .attr('height',800)
-.attr("transform", "translate(15,7900)")
+.attr("transform", "translate(15,8850)")
 .attr("class", "points");
 var colors = ["rgb(201, 125, 190)","rgb(34, 117, 77)" ,"rgb(232, 111, 104)", "rgb(184,162,69)", "rgb(60,57,62)", "rgb(166,189,158)", "rgb(156,112,93)","rgb(201,109,28)","rgb(120, 90, 163)"];
-
-
 
 var size = [8,16,32,64,64,64,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,64,64,64,32,16,6,6]
 
@@ -22,7 +23,7 @@ sum = sum + size[i];
     return color;
     })
     .attr('r',5)
-    .attr("class","oss")
+    .attr("class","oss" + toString(i))
     .style('stroke','rgb(0,0,0,0)')
     .style('opacity',function(f){
       if(i>7){
@@ -37,4 +38,3 @@ sum = sum + size[i];
     .attr('cy',7+(i*15));
   }
 }
-console.log(sum);
