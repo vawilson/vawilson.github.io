@@ -116,8 +116,9 @@ function update(source,num) {
   text = d.data.text;
 	name = d.data.name;
 	title = d.data.title;
+	font_name = d.data.font_name;
 	h_movement = d.data.historical_movement
-	text_dict[name] = [text,h_movement];
+	text_dict[name] = [text,h_movement,font_name];
   });
 
 	// Normalize for fixed-depth.
@@ -168,26 +169,25 @@ var node = svg.selectAll("g.node")
 
 	nodeEnter.append("text")
 	.attr("dx",function(d){
-  if( d.data.name === "Didone Serif"){
+  if( d.data.name === "Didone-Serif"){
   return -100;
 	}
 	else if (d.data.name === "Transitional-Serif") {
-   return -105;
+   return -108;
 	}
-	else if (d.data.name === "Scotch Roman"  ) {
-		return -93;
+	else if (d.data.name === "Scotch-Roman"  ) {
+		return -97;
 	}
 	else if ( d.data.name === "Serif" ) {
 		return -38;
 	}
 
 	else{
-		return 12;
+		return 17;
 	}
 
 	})
 	.attr("dy", ".35em")
-
 	.text(function(d){
 		if(d.data.type === "movement"){
 			return d.data.name;
@@ -244,7 +244,7 @@ function mousemove(d) {
 	// movements
 	else if (d.data.type === "movement") {
 		div
-		.html("<b>" + d.data.name + "</b>" +  "<br>"+"Designer: " + d.data.author + "<br>" + "Year created: " + d.data.year
+		.html("<b>" + d.data.name + "</b>" +  "<br>"+"Designer: " + d.data.author + "<br>" +  "Typeface: "+ d.data.typeface+ "<br>"+ "Year created: " + d.data.year
 		+ "<br> Country: " + d.data.country)
 
 		.style("left", (d3.event.pageX ) + "px")

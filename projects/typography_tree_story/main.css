@@ -2,12 +2,29 @@
 body {
   background-color: rgb(253, 241, 231);
 }
-@font-face {
-  font-family: GreatVibes;
-  src: url(GreatVibes-Regular.ttf);
+@font-face {font-family: "Jensen";
+src: url("display_fonts/jensen/35e8fc4eb3f285b4ddcedec471839746.eot"); /* IE9*/
+src: url("display_fonts/jensen/35e8fc4eb3f285b4ddcedec471839746.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+url("display_fonts/jensen/35e8fc4eb3f285b4ddcedec471839746.woff2") format("woff2"), /* chrome、firefox */
+url("display_fonts/jensen/35e8fc4eb3f285b4ddcedec471839746.woff") format("woff"), /* chrome、firefox */
+url("display_fonts/jensen/35e8fc4eb3f285b4ddcedec471839746.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+url("display_fonts/jensen/35e8fc4eb3f285b4ddcedec471839746.svg#Jenson Old Style W01 Bold Cn") format("svg"); /* iOS 4.1- */
+}
+@font-face {font-family: "Fraktur";
+src: url("display_fonts/fraktur/2d85024f43d9a43c487c297e3b7cdefb.eot");
+src: url("display_fonts/fraktur/2d85024f43d9a43c487c297e3b7cdefb.eot?#iefix") format("embedded-opentype"),
+url("display_fonts/fraktur/2d85024f43d9a43c487c297e3b7cdefb.woff2") format("woff2"),
+url("display_fonts/fraktur/2d85024f43d9a43c487c297e3b7cdefb.woff") format("woff"),
+url("display_fonts/fraktur/2d85024f43d9a43c487c297e3b7cdefb.ttf") format("truetype"),
+url("display_fonts/fraktur/2d85024f43d9a43c487c297e3b7cdefb.svg#Fraktur") format("svg");
 }
 
+@font-face {font-family: "Griffo"; src: url("display_fonts/griffo/e0fcf1cc6bed0f55f8a3af18e33479ce.eot"); src: url("display_fonts/griffo/e0fcf1cc6bed0f55f8a3af18e33479ce.eot?#iefix") format("embedded-opentype"), url("display_fonts/griffo/e0fcf1cc6bed0f55f8a3af18e33479ce.woff2") format("woff2"), url("display_fonts/griffo/e0fcf1cc6bed0f55f8a3af18e33479ce.woff") format("woff"), url("display_fonts/griffo/e0fcf1cc6bed0f55f8a3af18e33479ce.ttf") format("truetype"),
+url("display_fonts/griffo/e0fcf1cc6bed0f55f8a3af18e33479ce.svg#GriffoClassicoW00-Italic") format("svg"); }
 
+@font-face {font-family: "Franklin"; src: url("display_fonts/franklin/c5e318af825ba7118f0e432ef4150911.eot"); src: url("display_fonts/franklin/c5e318af825ba7118f0e432ef4150911.eot?#iefix") format("embedded-opentype"), url("display_fonts/franklin/c5e318af825ba7118f0e432ef4150911.woff2") format("woff2"), url("display_fonts/franklin/c5e318af825ba7118f0e432ef4150911.woff") format("woff"), url("display_fonts/franklin/c5e318af825ba7118f0e432ef4150911.ttf") format("truetype"), url("//display_fonts/franklin/c5e318af825ba7118f0e432ef4150911.svg#Franklin") format("svg"); }
+
+@font-face {font-family: "Bodoni"; src: url("display_fonts/bodoni/58792b56a7271a7454eea07ea8e4ba93.eot"); src: url("display_fonts/bodoni/58792b56a7271a7454eea07ea8e4ba93.eot?#iefix") format("embedded-opentype"), url("display_fonts/bodoni/58792b56a7271a7454eea07ea8e4ba93.woff2") format("woff2"), url("display_fonts/bodoni/58792b56a7271a7454eea07ea8e4ba93.woff") format("woff"), url("display_fonts/bodoni/58792b56a7271a7454eea07ea8e4ba93.ttf") format("truetype"), url("display_fonts/bodoni/58792b56a7271a7454eea07ea8e4ba93.svg#.VnBodoni") format("svg"); }
 .pic_leg {
   position: absolute;
   bottom:20px;
@@ -17,8 +34,8 @@ body {
   fill: "black";
 }
 p{
-    font-family: Helvetica;
-    font-size: 14;
+  font-family: Helvetica;
+  font-size: 14;
 }
 h1 {
   font-family: Helvetica;
@@ -121,8 +138,60 @@ h3 {
 .os {
   position:absolute;
   fill: 'white';
-  top: 8300px;
+  top: 8800px;
   left:0;
+}
+.gap {
+  position:absolute;
+  stroke: 'black'
+  opacity: 0;
+  top: 2000px;
+  left:0;
+}
+.sans {
+  position:absolute;
+  top: 4500px;
+  right:0;
+
+}
+.didone {
+  position:absolute;
+  top: 5600px;
+  right:0;
+
+}
+.slab{
+  position:absolute;
+  top: 6300px;
+  right:0;
+
+}
+.gro{
+  position:absolute;
+  top: 6600px;
+  right:0;
+
+}
+.hum{
+  position:absolute;
+  top: 7400px;
+  right:0;
+}
+.geo{
+  position:absolute;
+  top: 7200px;
+  right:0;
+}
+.neogro{
+  position:absolute;
+  top: 7900px;
+  right:0;
+}
+.scotch{
+  position:absolute;
+  top: 6000px;
+  right:0;
+
 }
 .script {
   position:absolute;
