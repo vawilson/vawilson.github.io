@@ -25,6 +25,12 @@ url("display_fonts/griffo/e0fcf1cc6bed0f55f8a3af18e33479ce.svg#GriffoClassicoW00
 @font-face {font-family: "Franklin"; src: url("display_fonts/franklin/c5e318af825ba7118f0e432ef4150911.eot"); src: url("display_fonts/franklin/c5e318af825ba7118f0e432ef4150911.eot?#iefix") format("embedded-opentype"), url("display_fonts/franklin/c5e318af825ba7118f0e432ef4150911.woff2") format("woff2"), url("display_fonts/franklin/c5e318af825ba7118f0e432ef4150911.woff") format("woff"), url("display_fonts/franklin/c5e318af825ba7118f0e432ef4150911.ttf") format("truetype"), url("//display_fonts/franklin/c5e318af825ba7118f0e432ef4150911.svg#Franklin") format("svg"); }
 
 @font-face {font-family: "Bodoni"; src: url("display_fonts/bodoni/58792b56a7271a7454eea07ea8e4ba93.eot"); src: url("display_fonts/bodoni/58792b56a7271a7454eea07ea8e4ba93.eot?#iefix") format("embedded-opentype"), url("display_fonts/bodoni/58792b56a7271a7454eea07ea8e4ba93.woff2") format("woff2"), url("display_fonts/bodoni/58792b56a7271a7454eea07ea8e4ba93.woff") format("woff"), url("display_fonts/bodoni/58792b56a7271a7454eea07ea8e4ba93.ttf") format("truetype"), url("display_fonts/bodoni/58792b56a7271a7454eea07ea8e4ba93.svg#.VnBodoni") format("svg"); }
+
+@font-face {font-family: "Antique"; src: url("display_fonts/antique/c6f66d3eac0eca1304d31ffea83f5380.eot"); src: url("display_fonts/antique/c6f66d3eac0eca1304d31ffea83f5380.eot?#iefix") format("embedded-opentype"), url("display_fonts/antique/c6f66d3eac0eca1304d31ffea83f5380.woff2") format("woff2"), url("display_fonts/antique/c6f66d3eac0eca1304d31ffea83f5380.woff") format("woff"), url("display_fonts/antique/c6f66d3eac0eca1304d31ffea83f5380.ttf") format("truetype"), url("display_fonts/antique/c6f66d3eac0eca1304d31ffea83f5380.svg#HWT Slab") format("svg"); }
+
+@font-face {font-family: "Grotesk"; src: url("display_fonts/grotesk/31698e90ae035da9a7078ed4831640fb.eot"); src: url("display_fonts/grotesk/31698e90ae035da9a7078ed4831640fb.eot?#iefix") format("embedded-opentype"), url("display_fonts/grotesk/31698e90ae035da9a7078ed4831640fb.woff2") format("woff2"), url("display_fonts/grotesk/31698e90ae035da9a7078ed4831640fb.woff") format("woff"), url("display_fonts/grotesk/31698e90ae035da9a7078ed4831640fb.ttf") format("truetype"), url("display_fonts/grotesk/31698e90ae035da9a7078ed4831640fb.svg#AkzidenzGrotesk") format("svg"); }
+
+@font-face {font-family: "Gotham"; src: url("display_fonts/gotham/bd317adf74e5e7e564eb61ce9926cc6d.eot"); src: url("display_fonts/gotham/bd317adf74e5e7e564eb61ce9926cc6d.eot?#iefix") format("embedded-opentype"), url("display_fonts/gotham/bd317adf74e5e7e564eb61ce9926cc6d.woff2") format("woff2"), url("display_fonts/gotham/bd317adf74e5e7e564eb61ce9926cc6d.woff") format("woff"), url("display_fonts/gotham/bd317adf74e5e7e564eb61ce9926cc6d.ttf") format("truetype"), url("display_fonts/gotham/bd317adf74e5e7e564eb61ce9926cc6d.svg#Gotham") format("svg"); }
 .pic_leg {
   position: absolute;
   bottom:20px;
@@ -141,7 +147,7 @@ h3 {
   top: 8800px;
   left:0;
 }
-.gap {
+.crag {
   position:absolute;
   stroke: 'black'
   opacity: 0;
@@ -198,6 +204,16 @@ h3 {
   stroke: 'black'
   opacity: 0;
   top: 1595px;
+  left:0;
+  font-family: Helvetica;
+  font-weight: lighter;
+  font-size: 12px;
+}
+.fraktur {
+  position:absolute;
+  stroke: 'black'
+  opacity: 0;
+  top: 2000px;
   left:0;
   font-family: Helvetica;
   font-weight: lighter;

@@ -146,7 +146,7 @@ open_source_svg = d3.select("body").append("svg")
 // Black Letter
 black_letter_svg = d3.select("body").append("svg")
 .attr('width',1400)
-.attr('height',515)
+.attr('height',800)
 .attr('id','blackletter')
 .attr("class", "blackletter")
 // Transitional
@@ -156,11 +156,11 @@ transitional_svg = d3.select("body").append("svg")
 .attr('id','transitional')
 .attr("class", "transitional");
 
-gap_svg = d3.select("body").append("svg")
+crag_svg = d3.select("body").append("svg")
 .attr('width',1400)
 .attr('height',815)
-.attr('id','gap')
-.attr("class", "gap");
+.attr('id','crag')
+.attr("class", "crag");
 
 sans_svg = d3.select("body").append("svg")
 .attr('width',1400)
@@ -209,7 +209,16 @@ neo_grotesque_svg = d3.select("body").append("svg")
 .attr('height',405)
 .attr('id','neogro')
 .attr("class", "neogro");
+
+fraktur_svg = d3.select("body").append("svg")
+.attr('width',1400)
+.attr('height',405)
+.attr('id','fraktur')
+.attr("class", "fraktur");
 //Waypoints
+$('.tool_svg')
+.css('opacity', 0) // immediately hide element
+
 $('.blackletter')
 .css('opacity', 0) // immediately hide element
 .waypoint(function(direction) {
@@ -221,7 +230,8 @@ $('.blackletter')
 
     if (text_dict['Black-Letter']){
       d3.select('#textbox').transition().text(text_dict['Black-Letter'][0])
-      d3.select('#title').transition().text('Black-Letter').style('font-family',text_dict['Black-Letter'][2])
+      d3.select('#title').transition().text('Black-Letter').style('font-family',text_dict['Black-Letter'][2]).style(
+        'font-size','22px')
       d3.select('#h_movement').transition().text(text_dict['Black-Letter'][1])
       d3.select('#text').transition().duration(1500).style("opacity",1)
     }
@@ -248,7 +258,8 @@ $('.renn')
     d3.select('#Oldstyle-Serif_path').transition().style("stroke", highlight).style("stroke-width",'3px')
     if(text_dict['Oldstyle-Serif']){
       d3.select('#textbox').transition().text(text_dict['Oldstyle-Serif'][0])
-      d3.select('#title').transition().text('Oldstyle-Serif').style('font-family',text_dict['Oldstyle-Serif'][2])
+      d3.select('#title').transition().text('Oldstyle-Serif').style('font-family',text_dict['Oldstyle-Serif'][2]).style(
+        'font-size','22px')
       d3.select('#h_movement').transition().text(text_dict['Oldstyle-Serif'][1])
       d3.select('#text').transition().duration(1500).style("opacity",1)
     }
@@ -261,7 +272,8 @@ $('.renn')
     d3.select('#Oldstyle-Serif_path').transition().style("stroke", "rgb(0,0,0)").style("stroke-width",'1px')
     if (text_dict['Black-Letter']){
       d3.select('#textbox').transition().text(text_dict['Black-Letter'][0])
-      d3.select('#title').transition().text('Black-Letter').style('font-family',text_dict['Black-Letter'][2])
+      d3.select('#title').transition().text('Black-Letter').style('font-family',text_dict['Black-Letter'][2]).style(
+        'font-size','22px')
       d3.select('#h_movement').transition().text(text_dict['Black-Letter'][1])
       d3.select('#text').transition().duration(1500).style("opacity",1)
     }
@@ -284,7 +296,7 @@ $('.script')
     if(text_dict['Script']){
 
       d3.select('#h_movement').transition(1500).text(text_dict['Script'][1])
-      d3.select('#title').transition(1500).style("opacity",1).text('Script').style('font-family',text_dict['Script'][2]).style("font-size",'18')
+      d3.select('#title').transition(1500).style("opacity",1).text('Script').style('font-family',text_dict['Script'][2]).style("font-size",'22')
       d3.select('#textbox').transition(1500).style("opacity",1).text(text_dict['Script'][0]).style('font-family','Helvetica')
     }
   }
@@ -298,7 +310,8 @@ $('.script')
 
     if(text_dict['Oldstyle-Serif']){
       d3.select('#textbox').transition().text(text_dict['Oldstyle-Serif'][0])
-      d3.select('#title').transition().text('Oldstyle-Serif').style('font-family',text_dict['Oldstyle-Serif'][2])
+      d3.select('#title').transition().text('Oldstyle-Serif').style('font-family',text_dict['Oldstyle-Serif'][2]).style(
+        'font-size','22px')
       d3.select('#h_movement').transition().text(text_dict['Oldstyle-Serif'][1])
       d3.select('#text').transition().duration(1750).style("opacity",1)
     }
@@ -307,25 +320,29 @@ $('.script')
 }, {
   offset: 'bottom-in-view'
 })
-$('.gap')
+$('.crag')
 .css('opacity', 0) // immediately hide element
 .waypoint(function(direction) {
   if (direction === 'down') {
     $(this.element).animate({ opacity: 1 })
     d3.select('#Script').transition().style("stroke", 'rgb(0,0,0)').style("stroke-width",'1px').attr("r", 10)
     d3.select('#Script_path').transition().style("stroke",'rgb(0,0,0)').style("stroke-width",'1px')
-    d3.select('#h_movement').transition(1500).text("Mystery Movement")
-    d3.select('#title').transition(1500).style("opacity",1).text("Mystery").style('font-family',"Helvetica")
-    d3.select('#textbox').transition(1500).style("opacity",1).text("A mystery")
+    d3.select('#h_movement').transition().text("")
+    d3.select('#title').transition().style("opacity",0).text("").style('font-family',"Helvetica").style(
+      'font-size','22px')
+    d3.select('#textbox').transition().style("opacity",0).text("")
+    d3.select('#influence').transition().style("opacity",0)
   }
   else {
     $(this.element).animate({ opacity: 0 })
-    d3.select('#Script').transition().style("stroke", highlight).style("stroke-width",'3px').attr("r", 15)
-    d3.select('#Script_path').transition().style("stroke",highlight).style("stroke-width",'3px')
-    d3.select('#h_movement').transition(1500).text(text_dict['Script'][1])
-    d3.select('#title').transition(1500).style("opacity",1).text('Script').style('font-family',text_dict['Script'][2]).style("font-size",'18')
-    d3.select('#textbox').transition(1500).style("opacity",1).text(text_dict['Script'][0]).style('font-family','Helvetica')
+    d3.select('#Fraktur').transition().style("stroke", highlight).style("stroke-width",'3px').attr("r", 15)
+    d3.select('#Fraktur_path').transition().style("stroke",highlight).style("stroke-width",'3px')
+    d3.select('#h_movement').transition(1500).text(text_dict['Fraktur'][1])
+    d3.select('#title').transition(1500).style("opacity",1).text('Fraktur').style('font-family',text_dict['Fraktur'][2]).style(
+      'font-size','22px')
+    d3.select('#textbox').transition(1500).style("opacity",1).text(text_dict['Fraktur'][0]).style('font-family','Helvetica')
     d3.select('#text').transition().duration(1750).style("opacity",1)
+    d3.select('#influence').transition().style("opacity",1)
 
   }
 }, {
@@ -341,19 +358,21 @@ $('.transitional')
     d3.select('#Transitional-Serif').transition().style("stroke", highlight).style("stroke-width",'3px').attr('r',15)
     d3.select('#Transitional-Serif_path').transition().style("stroke", highlight).style("stroke-width",'3px')
     if(text_dict['Transitional-Serif']){
-      d3.select('#h_movement').transition().text(text_dict['Transitional-Serif'][1])
-      d3.select('#title').transition().text('Transitional-Serif').style('font-family','Baskerville')
-      d3.select('#textbox').transition().text(text_dict['Transitional-Serif'][0])
+      d3.select('#h_movement').transition().text(text_dict['Transitional-Serif'][1]).style("opacity",1)
+      d3.select('#title').transition().text('Transitional-Serif').style('font-family','Baskerville').style("opacity",1)
+      d3.select('#textbox').transition().text(text_dict['Transitional-Serif'][0]).style("opacity",1)
       d3.select('#text').transition().duration(1750).style("opacity",1)
+      d3.select('#influence').transition().style("opacity",1)
     }
   }
   else {
     $(this.element).animate({ opacity: 0 })
     d3.select('#Transitional-Serif').transition().style("stroke", "rgb(0,0,0)").style("stroke-width",'1px').attr('r',10)
     d3.select('#Transitional-Serif_path').transition().style("stroke", "rgb(0,0,0)").style("stroke-width",'1px')
-    d3.select('#h_movement').transition(1500).text("Mystery Movement")
-    d3.select('#title').transition(1500).style("opacity",1).text("Mystery").style('font-family','Helvetica')
-    d3.select('#textbox').transition(1500).style("opacity",1).text("A mystery")
+    d3.select('#h_movement').transition(1500).text("").style("opacity",0)
+    d3.select('#title').transition(0).style("opacity",0).text("").style('font-family','Helvetica')
+    d3.select('#textbox').transition(0).style("opacity",0).text("")
+    d3.select('#influence').transition().style("opacity",0)
   }
 }, {
   offset: 'bottom-in-view'
@@ -436,7 +455,7 @@ $('.scotch')
     d3.select('#Scotch-Roman_path').transition().style("stroke", highlight).style("stroke-width",'3px')
     if (text_dict['Scotch-Roman']){
       d3.select('#textbox').transition().text(text_dict['Scotch-Roman'][0])
-      d3.select('#title').transition().text('Scotch-Roman')
+      d3.select('#title').transition().text('Scotch-Roman').style('font-family','Georgia')
       d3.select('#h_movement').transition().text(text_dict['Scotch-Roman'][1])
       d3.select('#text').transition().duration(1500).style("opacity",1)
     }
@@ -470,7 +489,7 @@ $('.slab')
     d3.select('#Scotch-Roman_path').transition().style("stroke",'rgb(0,0,0)').style("stroke-width",'1px')
     if (text_dict['Slab-Serif']){
       d3.select('#textbox').transition().text(text_dict['Slab-Serif'][0])
-      d3.select('#title').transition().text('Slab-Serif')
+      d3.select('#title').transition().text('Slab-Serif').style('font-family',"Antique")
       d3.select('#h_movement').transition().text(text_dict['Slab-Serif'][1])
       d3.select('#text').transition().duration(1500).style("opacity",1)
     }
@@ -485,7 +504,7 @@ $('.slab')
 
     if (text_dict['Scotch-Roman']){
       d3.select('#textbox').transition().text(text_dict['Scotch-Roman'][0])
-      d3.select('#title').transition().text('Scotch-Roman')
+      d3.select('#title').transition().text('Scotch-Roman').style('font-family','Georgia')
       d3.select('#h_movement').transition().text(text_dict['Scotch-Roman'][1])
       d3.select('#text').transition().duration(1500).style("opacity",1)
     }
@@ -506,7 +525,7 @@ $('.gro')
 
     if (text_dict['Grotesque']){
       d3.select('#textbox').transition().text(text_dict['Grotesque'][0])
-      d3.select('#title').transition().text('Grotesque')
+      d3.select('#title').transition().text('Grotesque').style('font-family','Grotesk')
       d3.select('#h_movement').transition().text(text_dict['Grotesque'][1])
       d3.select('#text').transition().duration(1500).style("opacity",1)
     }
@@ -519,7 +538,7 @@ $('.gro')
     d3.select('#Grotesque_path').transition().style("stroke",'rgb(0,0,0)').style("stroke-width",'1px')
     if (text_dict['Slab-Serif']){
       d3.select('#textbox').transition().text(text_dict['Slab-Serif'][0])
-      d3.select('#title').transition().text('Slab-Serif')
+      d3.select('#title').transition().text('Slab-Serif').style('font-family',"Antique")
       d3.select('#h_movement').transition().text(text_dict['Slab-Serif'][1])
       d3.select('#text').transition().duration(1500).style("opacity",1)
     }
@@ -538,7 +557,7 @@ $('.hum ')
     d3.select('#Humanist_path').transition().style("stroke", highlight).style("stroke-width",'3px')
     if (text_dict['Humanist']){
       d3.select('#textbox').transition().text(text_dict['Humanist'][0])
-      d3.select('#title').transition().text('Humanist')
+      d3.select('#title').transition().text('Humanist').style('font-family',"Verdana")
       d3.select('#h_movement').transition().text(text_dict['Humanist'][1])
       d3.select('#text').transition().duration(1500).style("opacity",1)
     }
@@ -551,7 +570,7 @@ $('.hum ')
     d3.select('#Grotesque_path').transition().style("stroke", highlight).style("stroke-width",'3px')
     if (text_dict['Grotesque']){
       d3.select('#textbox').transition().text(text_dict['Grotesque'][0])
-      d3.select('#title').transition().text('Grotesque')
+      d3.select('#title').transition().text('Grotesque').style('font-family','Grotesk')
       d3.select('#h_movement').transition().text(text_dict['Grotesque'][1])
       d3.select('#text').transition().duration(1500).style("opacity",1)
     }
@@ -572,7 +591,7 @@ $('.geo ')
 
     if (text_dict['Geometric']){
       d3.select('#textbox').transition().text(text_dict['Geometric'][0])
-      d3.select('#title').transition().text('Geometric')
+      d3.select('#title').transition().text('Geometric').style('font-family','Gotham')
       d3.select('#h_movement').transition().text(text_dict['Geometric'][1])
       d3.select('#text').transition().duration(1500).style("opacity",1)
     }
@@ -585,7 +604,7 @@ $('.geo ')
     d3.select('#Humanist_path').transition().style("stroke", highlight).style("stroke-width",'3px')
     if (text_dict['Humanist']){
       d3.select('#textbox').transition().text(text_dict['Humanist'][0])
-      d3.select('#title').transition().text('Humanist')
+      d3.select('#title').transition().text('Humanist').style('font-family',"Verdana")
       d3.select('#h_movement').transition().text(text_dict['Humanist'][1])
       d3.select('#text').transition().duration(1500).style("opacity",1)
     }
@@ -606,7 +625,7 @@ $('.neogro ')
 
     if (text_dict['Neo-grotesque']){
       d3.select('#textbox').transition().text(text_dict['Neo-grotesque'][0])
-      d3.select('#title').transition().text('Neo-grotesque')
+      d3.select('#title').transition().text('Neo-grotesque').style('font-family','Helvetica')
       d3.select('#h_movement').transition().text(text_dict['Neo-grotesque'][1])
       d3.select('#text').transition().duration(1500).style("opacity",1)
     }
@@ -619,8 +638,42 @@ $('.neogro ')
     d3.select('#Geometric_path').transition().style("stroke", highlight).style("stroke-width",'3px')
     if (text_dict['Geometric']){
       d3.select('#textbox').transition().text(text_dict['Geometric'][0])
-      d3.select('#title').transition().text('Geometric')
+      d3.select('#title').transition().text('Geometric').style('font-family','Gotham')
       d3.select('#h_movement').transition().text(text_dict['Geometric'][1])
+      d3.select('#text').transition().duration(1500).style("opacity",1)
+    }
+  }
+}, {
+  offset: 'bottom-in-view'
+})
+$('.fraktur ')
+.css('opacity', 0) // immediately hide element
+.waypoint(function(direction) {
+  if (direction === 'down') {
+    $(this.element).animate({ opacity: 1 })
+    d3.select('#Script').transition().style("stroke", 'rgb(0,0,0)').style("stroke-width",'1px').attr("r", 10)
+    d3.select('#Script_path').transition().style("stroke",'rgb(0,0,0)').style("stroke-width",'1px')
+    d3.select('#Fraktur').transition().style("stroke", highlight).style("stroke-width",'3px').attr('r',15)
+    d3.select('#Fraktur_path').transition().style("stroke", highlight).style("stroke-width",'3px')
+
+
+    if (text_dict['Fraktur']){
+      d3.select('#textbox').transition().text(text_dict['Fraktur'][0])
+      d3.select('#title').transition().text('Fraktur').style('font-family',text_dict['Fraktur'][2])
+      d3.select('#h_movement').transition().text(text_dict['Fraktur'][1])
+      d3.select('#text').transition().duration(1500).style("opacity",1)
+    }
+  }
+  else {
+    $(this.element).animate({ opacity: 0 })
+    d3.select('#Fraktur').transition().style("stroke", 'rgb(0,0,0)').style("stroke-width",'1px').attr("r", 10)
+    d3.select('#Fraktur_path').transition().style("stroke",'rgb(0,0,0)').style("stroke-width",'1px')
+    d3.select('#Script_path').transition().style("stroke", highlight).style("stroke-width",'3px').attr('r',15)
+    d3.select('#Script').transition().style("stroke", highlight).style("stroke-width",'3px')
+    if (text_dict['Script']){
+      d3.select('#textbox').transition().text(text_dict['Script'][0])
+      d3.select('#title').transition().text('Script').style('font-family',text_dict['Script'][1])
+      d3.select('#h_movement').transition().text(text_dict['Script'][1])
       d3.select('#text').transition().duration(1500).style("opacity",1)
     }
   }
@@ -636,7 +689,7 @@ $('.os')
     d3.select('#Neo-grotesque_path').transition().style("stroke",'rgb(0,0,0)').style("stroke-width",'1px')
 
     d3.select('#textbox').transition().text(text_dict['OS'][0])
-    d3.select('#title').transition().text('Open Source Fonts')
+    d3.select('#title').transition().text('Open Source Fonts').style('font-family','Helvetica')
     d3.select('#h_movement').transition().text(text_dict['OS'][1])
     d3.select('#text').transition().duration(1500).style("opacity",1)
 
@@ -646,7 +699,7 @@ $('.os')
     d3.select('#Neo-grotesque_path').transition().style("stroke", highlight).style("stroke-width",'3px')
     if (text_dict['Neo-grotesque']){
       d3.select('#textbox').transition().text(text_dict['Neo-grotesque'][0])
-      d3.select('#title').transition().text('Neo-grotesque')
+      d3.select('#title').transition().text('Neo-grotesque').style('font-family','Helvetica')
       d3.select('#h_movement').transition().text(text_dict['Neo-grotesque'][1])
       d3.select('#text').transition().duration(1500).style("opacity",1)
     }

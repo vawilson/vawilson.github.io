@@ -124,9 +124,37 @@ function update(source,num) {
 	// Normalize for fixed-depth.
 	nodes.forEach(function(d) {
 		d.y = yScale(d.data.year);
+
 	}
 );
-nodes.forEach(function(d) { d.x = d.x +150 ; });
+nodes.forEach(function(d) {
+	d.x = d.x +150 ;
+	if(d.data.name === "Antiqua"){
+		d.x = d.x +130 ;
+	}
+	if(d.data.name === "Schwabacher"){
+		d.x = d.x +120 ;
+	}
+	if(d.data.name === "Fraktur"){
+		d.x = d.x +170 ;
+	}
+	if(d.data.name === "Script"){
+		d.x = d.x - 250 ;
+	}
+	if(d.data.name === "Italic"){
+		d.x = d.x - 270 ;
+	}
+	if(d.data.name === "Textualis"){
+		d.x = d.x + 100 ;
+	}
+	if(d.data.name === "Bodoni"){
+		d.x = d.x - 50 ;
+	}
+	if(d.data.name === "Didot"){
+		d.x = d.x - 70 ;
+	}
+
+ });
 
 
 // Declare the nodesâ€¦
@@ -170,7 +198,7 @@ var node = svg.selectAll("g.node")
 	nodeEnter.append("text")
 	.attr("dx",function(d){
   if( d.data.name === "Didone-Serif"){
-  return -100;
+  return -80;
 	}
 	else if (d.data.name === "Transitional-Serif") {
    return -108;
@@ -187,7 +215,12 @@ var node = svg.selectAll("g.node")
 	}
 
 	})
-	.attr("dy", ".35em")
+	.attr("dy", function(d){
+
+	if( d.data.name === "Didone-Serif"){
+		return -5;
+		}
+	return ".35em"})
 	.text(function(d){
 		if(d.data.type === "movement"){
 			return d.data.name;
