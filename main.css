@@ -33,13 +33,6 @@ body{
   overflow-y: scroll;
 }
 
-.header-container {
-	/* max-width: 1000px; */
-	margin-left: auto;
-  margin-right: auto;
-  display: absolute;
-}
-
 .body-container {
 	max-width: 1000px;
 	margin-left: auto;
@@ -70,12 +63,6 @@ h1 {
   position: relative;
   text-align: center;
   color: white;
-}
-.centered {
-  position: absolute;
-  top: 40%;
-  left: 45%;
-  transform: translate(-50%, -50%);
 }
 h3 {
 	text-align: center;
@@ -129,29 +116,6 @@ h2 {
   font-weight: 600;
   border-bottom: #333333 1px solid;
 }
-
-.secret-bio {
-  margin-top: 15px;
-}
-
-.socials {
-	font-size: 1.75em;
-}
-
-.socials a:hover {
-	background-color: rgb(183, 217, 250);
-}
-
-/* code {
-  background-color: rgb(183, 217, 250);
-  color: #333333;
-  font-size: 22px;
-  padding: 3px;
-  border-radius: 3px;
-  margin-top: 30px;
-  font-weight: 600;
-} */
-
 
 h1.section-title {
   font-size: 7vh;
