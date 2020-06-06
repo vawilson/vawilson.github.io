@@ -352,7 +352,7 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 > * 📖 [Normalize.css](https://necolas.github.io/normalize.css/)
 > * 📖 [Reboot](https://getbootstrap.com/docs/4.0/content/reboot/)
 
-* [ ] **JS prefix:** ![Low][low_img] All classes (or id- used in JavaScript files) begin with **js-** and are not styled into the CSS files.
+* [X] **JS prefix:** ![Low][low_img] All classes (or id- used in JavaScript files) begin with **js-** and are not styled into the CSS files.
 
 ```html
 <div id="js-slider" class="my-slider">
@@ -360,16 +360,16 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 <div id="id-used-by-cms" class="js-slider my-slider">
 ```
 
-* [ ] **embedded or inline CSS:** ![High][high_img] Avoid at all cost embedding CSS in `<style>` tags or using inline CSS: only use for valid reasons (e.g. background-image for slider, critical CSS).
-* [ ] **Vendor prefixes:** ![High][high_img] CSS vendor prefixes are used and are generated accordingly with your browser support compatibility.
+* [X] **embedded or inline CSS:** ![High][high_img] Avoid at all cost embedding CSS in `<style>` tags or using inline CSS: only use for valid reasons (e.g. background-image for slider, critical CSS).
+* [X] **Vendor prefixes:** ![High][high_img] CSS vendor prefixes are used and are generated accordingly with your browser support compatibility.
 
 > * 🛠 [Autoprefixer CSS online](https://autoprefixer.github.io/)
 
 ### Performance
 
 - [X] **Concatenation:** ![High][high_img] CSS files are concatenated in a single file *(Not for HTTP/2)*.
-- [ ] **Minification:** ![High][high_img] All CSS files are minified.
-- [ ] **Non-blocking:** ![Medium][medium_img] CSS files need to be non-blocking to prevent the DOM from taking time to load.
+- [X] **Minification:** ![High][high_img] All CSS files are minified.
+- [X] **Non-blocking:** ![Medium][medium_img] CSS files need to be non-blocking to prevent the DOM from taking time to load.
 
 > * 📖 [loadCSS by filament group](https://github.com/filamentgroup/loadCSS)
 > * 📖 [Example of preload CSS using loadCSS](https://gist.github.com/thedaviddias/c24763b82b9991e53928e66a0bafc9bf)
@@ -384,7 +384,7 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 ### CSS testing
 
-* [ ] **Stylelint:** ![High][high_img] All CSS or SCSS files are without any errors.
+* [X] **Stylelint:** ![High][high_img] All CSS or SCSS files are without any errors.
 
 > * 🛠 [stylelint, a CSS linter](https://stylelint.io/)
 > * 📖 [Sass guidelines](https://sass-guidelin.es/)
