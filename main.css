@@ -21,7 +21,7 @@ body {
 	max-width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
-	display: inline-flex;
+	display: inline-flexbox;
 }
 section {
 	margin-bottom: 10vh;
@@ -34,6 +34,7 @@ h1 {
 	text-align: center;
 }
 .container {
+
 	position: relative;
 	text-align: center;
 	color: white;
@@ -100,6 +101,7 @@ section.header a:hover {
 	margin-left: auto;
 	margin-right: auto;
 	float: left;
+	height:auto;
 	width: 33%;
 	box-sizing: border-box;
 	filter: none;
@@ -108,13 +110,26 @@ section.header a:hover {
 	text-align: center;
 	display: table-cell;
 	margin-top: auto;
-	margin-bottom: auto;
+	margin-bottom: 30px;
 	display: flex;
 	align-items: center;
 }
 .content {
 	padding: 6px 1em;
 	margin: 0em 1em 1em 1em;
+	height:250px;
+	display: inline-block;
+	vertical-align: top;
+	border-width: 1px;
+	border-color: rgb(183, 217, 250);
+	border-style: solid;
+	filter: grayscale(100%);
+	transition: all .2s;
+}
+.reviews {
+	padding: 6px 1em;
+	margin: 0em 1em 1em 1em;
+	height:80px;
 	display: inline-block;
 	vertical-align: top;
 	border-width: 1px;
@@ -128,6 +143,11 @@ section.header a:hover {
 	transform: scale(1.05);
 	background-color: rgb(228, 239, 250);
 }
+.reviews:hover {
+	filter: none;
+	transform: scale(1.05);
+	background-color: rgb(228, 239, 250);
+}
 .info {
 	position: relative;
 	padding-bottom: 1.1em;
@@ -136,6 +156,7 @@ section.header a:hover {
 	font-size: 14px;
 	font-weight: 100;
 	line-height: 18px;
+	height: 30px;
 	text-align: left;
 	text-justify: inter-character;
 	word-break: normal;
