@@ -391,7 +391,7 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 * [X] **Responsive web design:** ![High][high_img] All pages were tested at the following breakpoints: 320px, 768px, 1024px (can be more / different according to your analytics).
 
-* [ ] **CSS Validator:** ![Medium][medium_img] The CSS was tested and pertinent errors were corrected.
+* [X] **CSS Validator:** ![Medium][medium_img] The CSS was tested and pertinent errors were corrected.
 
 > * 🛠 [CSS Validator](https://jigsaw.w3.org/css-validator/)
 
@@ -437,7 +437,7 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 * [ ] **Retina:** ![Low][low_img] You provide layout images 2x or 3x, support retina display.
 * [ ] **Sprite:** ![Medium][medium_img] Small images are in a sprite file (in the case of icons, they can be in an SVG sprite image).
 * [ ] **Width and Height:** ![High][high_img] Set `width` and `height` attributes on `<img>` if the final rendered image size is known (can be omitted for CSS sizing).
-* [ ] **Alternative text:** ![High][high_img] All `<img>` have an alternative text which describes the image visually.
+* [X] **Alternative text:** ![High][high_img] All `<img>` have an alternative text which describes the image visually.
 
 > * 📖 [Alt-texts: The Ultimate Guide](https://axesslab.com/alt-texts/)
 
@@ -451,9 +451,9 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 ### Best practices
 
-* [ ] **JavaScript Inline:** ![High][high_img] You don't have any JavaScript code inline (mixed with your HTML code).
-* [ ] **Concatenation:** ![High][high_img] JavaScript files are concatenated.
-* [ ] **Minification:** ![High][high_img] JavaScript files are minified (you can add the `.min` suffix).
+* [X] **JavaScript Inline:** ![High][high_img] You don't have any JavaScript code inline (mixed with your HTML code).
+* [X] **Concatenation:** ![High][high_img] JavaScript files are concatenated.
+* [X] **Minification:** ![High][high_img] JavaScript files are minified (you can add the `.min` suffix).
 
 > * 📖 [Minify Resources (HTML, CSS, and JavaScript)](https://developers.google.com/speed/docs/insights/MinifyResources)
 
