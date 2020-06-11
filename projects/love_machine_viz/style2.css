@@ -1,0 +1,84 @@
+@import "https://fonts.googleapis.com/css?family=Ubuntu+Mono";
+
+/* body {
+  padding-right: 25%;
+  padding-left: 5%;
+} */
+
+.body{
+  overflow-y: auto;
+
+}
+.pool {
+  background: #212222;
+  color: #fff;
+  padding-bottom: 800px;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: .8rem;
+  font-weight: regular;
+  -webkit-font-smoothing: antialiased;
+
+}
+.intro-text {
+     left: 0;
+     line-height: 200px;
+     margin-top: -100px;
+     position: absolute;
+     text-align: center;
+     top: 50%;
+     width: 100%;
+}
+.intro {
+    padding-bottom: 800px;
+    margin: 0;
+    background-color: #F6999A;
+    color: #CF2456;
+    font-family: Helvetica;
+}
+
+
+intro.h1{
+    font-size: 120pt;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+}
+intro.h2{
+    padding: 0;
+    font-size: 31pt;
+    text-align: center;
+}
+intro.p{
+    padding: 0;
+    font-size: 16pt;
+    text-align: center;
+    line-height: 21px;
+}
+
+#mycanvas {
+  color: #fff;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 1.6rem;
+  font-weight: regular;
+}
+
+.filtered {
+  filter: grayscale(100%);
+}
+.non-filtered {
+
+}
+.radar {
+ padding-top: 120px;
+}
+.column {
+  float: left;
+  width: 50%;
+}
+
+body label {
+  color: #6c757d;
+  display: block;
+  margin-top: 2rem;
+}

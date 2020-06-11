@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Love Machine</title>
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css'>
+  <link rel='stylesheet' href='https://andreruffert.github.io/rangeslider.js/assets/rangeslider.js/dist/rangeslider.css'>
+  <link rel="stylesheet" href="./style.css">
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+</head>
+<body>
+  <!-- partial:index.partial.html -->
+  <html>
+  <head>
+  </head>
+  <body>
+    <div id="fullpage">
+      <section class="vertical-scrolling" data-anchor="firstPage">
+
+        <div class = "intro">
+          <div class = "intro-text">
+
+            <h1> <b style = "font-size: 7rem;",> LOVE MACHINE </b> </h1>
+            <h2 style = "line-height: 12pt; font-size: 1.81rem;",> Martina Lo | Sirila Padi | Tim Proctor | Ella Silva | Valentine Wilson</h2>
+            <p style= "line-height: 23pt; font-size: 1.28rem",>
+              <i><br> Why settle for Mr. Maybe, when we can show you Mr. Right?<br/><br></i>
+              A group of students at Georgia Tech engineered a solution to find love on campus. In fact,  <br> more than 1,900 students have completed the survey and received their best match — courtesy <br>  of a specially designed algorithm. Although, we cannot disclose any personal information of the <br>participants,  we are excited to give you peek at what Love Machine is all about. <br><br> In our data visualization, you can explore how big your pool is based on your demographic,<br> see how closely your values align with the typical Georgia Tech student, and compare your <br> values with your possible matches. Love is in the air!
+            </p>
+
+          </div>
+        </div>
+        <br><br><br><br><br><br>
+
+        <!-- <h3 class="scroll"><i class="fa fa-angle-double-down" aria-hidden="true"></i>Scroll Down<i class="fa fa-angle-double-down" aria-hidden="true"></i></h3>> -->
+      </section>
+
+
+
+      <section class="vertical-scrolling" data-anchor="secondPage">
+        <h2></h2>
+        <div style="position: absolute"; class = "pool">
+          <div class = "column" style="padding: 5%;", >
+            <div = "demographics">
+              <h1> <b style="color: #CF2456" >Find Your Pool</b> </h1>
+            </div>
+            <p>
+              Given your gender, sexual orientation, and ethnicity, our visualization shows just how many participants dig your vibes.
+
+            </p>
+            <div class="container">
+              <div class="row">
+                <div class="col-6 col-md-6">
+                  <label>Ethnicity</label>
+                  <select class="selectpicker" id="mySelect3" onChange="eFunc()">
+                    <option value="None">Nothing selected</option>
+                    <option value="White">White</option>
+                    <option value="Black/African American">Black/African American</option>
+                    <option value="Black/African">Black/African</option>
+                    <option value="South Asian">South Asian</option>
+                    <option value="Hispanic/Latinx">Hispanic/Latinx</option>
+                    <option value="Middle Eastern/North African">Middle Eastern/North African
+                      <option value="East Asian">East Asian</option>
+                      <option value="Central Asian">Central Asian</option>
+                      <option value="Southeast Asian">Southeast Asian</option>
+                      <option value="Russian">Russian</option>
+                      <option value="Native Hawaiian">Native Hawaiian</option>
+                      <option value="Native American">Native American</option>
+                    </select>
+                    <label>Gender</label>
+                    <select class="selectpicker" id="mySelect" onChange="gFunc()">
+                      <option value="None">Nothing selected</option>
+                      <option value="Female">Female</option>
+                      <option value="Male">Male</option>
+                    </select >
+                    <label>Sexual Orientation</label>
+                    <select class="selectpicker" id="mySelect2" onChange="sFunc()">
+                      <option value="None">Nothing selected</option>
+                      <option value="Heterosexual">Heterosexual</option>
+                      <option value="Homosexual">Homosexual</option>
+                      <option value="Bisexual">Bisexual</option>
+                      <option value="Pansexual">Pansexual</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <br><br><br>
+              <div class = legend>
+                <img
+                src="/equation.svg"
+                alt="heart"
+                height="100"
+                width="300"
+                y = "500" />
+              </div>
+            </div>
+            <div class = "column">
+              <br><br>
+              <div id="main">
+                <svg width="700" height="750" style="border:0px solid #777;">
+                  <!-- <svg width=100% height="750" style="border:0px solid #777;"> -->
+                </svg>
+                <div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br><br><br><br><br><br><br><br>
+          <!-- <h3 class="scroll"><i class="fa fa-angle-double-down" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Scroll Down&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-double-down" aria-hidden="true"></i></h3>> -->
+        </section>
+
+
+        <section class="vertical-scrolling" data-anchor="thirdPage">
+          <div class = "lcolumn" id="lcolumn">
+            <div class = "radar">
+              <br>
+              <h2  style="text-align: center">Compare Your Results</h2>
+              <!-- <h5  style="padding-left: 45%;">Legend</h5> -->
+              <p  style="text-align: center;">Click the labels to hide/show data on this radar chart. <br> Hover over the points to see result details.</p>
+              <script src="main.js" type="text/JavaScript"/></script>
+              <!-- <div style="width:100%; height: 400%; position: absolute;" class="questions" id="radar"> -->
+              <!-- <div class="questions" id="radar"> -->
+              <canvas  id="mycanvas"></canvas>
+              <!-- </div> -->
+            </div>
+
+          </div>
+
+          <div class = "rcolumn" id="rcolumn" style="padding-right: 10%;">
+            <div class = "survey" id="survey">
+              <!-- <wrapper> -->
+              <br><br>
+              <h2><b style="color: #CF2456">Love Machine Questionnaire</b></h2>
+              <h5 style = "font-size: 12pt;",> Answer these <b> controversial </b> questions to see how you compare!
+              </h5>
+              <p>What kind of relationship are you looking for? (1 - Not serious, 7 - Very serious) </p>
+              <input  type="range" min="1" max="7" step="1" value="1" id="0"/>
+
+              <div style="line-height:100%;">
+                <br>
+              </div>
+
+              <p>Are sports important to you? (1 - Not important, 7 - Very important)</p>
+              <input  type="range" min="1" max="7" step="1" value="1" id="1"/>
+              <div style="line-height:100%;">
+                <br>
+              </div>
+
+              <p>How much time do you expect to spend with your partner? (1 - Little, 7 - Lots)</p>
+              <input id="2" type="range" min="1" max="7" step="1" value="1" />
+              <div style="line-height:100%;">
+                <br>
+              </div>
+
+              <p>It is important that I make more money than my peers. (1 - Not important, 7 - Mucho)</p>
+              <input id="3" type="range" min="1" max="7" step="1" value="1"/>
+              <div style="line-height:100%;">
+                <br>
+              </div>
+
+              <p>420? (1 - Not interested, 7 - Very interested)</p>
+              <input id="4" type="range" min="1" max="7" step="1" value="1"/>
+              <div style="line-height:100%;">
+                <br>
+              </div>
+
+              <p>I am comfortable with my child being gay. (1 - No, 7 - Yes)</p>
+              <input id="5" type="range" min="1" max="7" step="1" value="1" />
+              <div style="line-height:100%;">
+                <br>
+              </div>
+
+              <p>Rate the importance of sex in a relationship. (1 - Not important, 7 - Very important)</p>
+              <input id="6" type="range" min="1" max="7" step="1" value="1"/>
+              <div style="line-height:100%;">
+                <br>
+              </div>
+
+              <p>I prefer politically incorrect humor. (1 - Not interested, 7 - Very interested)</p>
+              <input id="7" type="range" min="1" max="7" step="1" value="1" />
+              <div style="line-height:100%;">
+                <br>
+              </div>
+
+              <p>Emotional vulnerability is an important part of my friendships. (1 - No, 7 - Yes)</p>
+              <input id="8" type="range" min="1" max="7" step="1" value="1" />
+              <div style="line-height:100%;">
+                <br>
+              </div>
+
+              <p>If you do nothing for an entire day, how do you feel?(1 - Terrible, 7 - Fantastic)</p>
+              <input id="9" type="range" min="1" max="7" step="1" value="1"/>
+              <div style="line-height:100%;">
+                <br>
+              </div>
+
+              <p>I prefer a partner with a similar ethnicity as myself. (1 - Not Important, 7 - Very Important)</p>
+              <input id="10" type="range" min="1" max="7" step="1" value="1" />
+              <br><br>
+
+            </div>
+          </div>
+
+          <br><br><br><br><br><br>
+          <!-- <h3 class="scroll"><i class="fa fa-angle-double-down" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Scroll Down&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-double-down" aria-hidden="true"></i></h3>> -->
+        </section>
+
+
+
+
+      </div>
+    </body>
+    </html>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js'></script><script  src="./script_scrolling.js"></script>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='https://andreruffert.github.io/rangeslider.js/assets/rangeslider.js/dist/rangeslider.min.js'>
+    </script><script  src="./script.js" type="text/JavaScript"/></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  </body>
+  </html>
