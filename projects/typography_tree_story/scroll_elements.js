@@ -1,17 +1,19 @@
+// get the window height/width
 var h = window.innerHeight
 var w = $(document).width();
+//select the main svg
 var svg = d3.select("#svg");
 
-//legend/toolbar
+//legend/toolbar dimensions
 svg_offset = 460;
 legend_w = 180;
 legend_h = 230;
-
+//create the svg for the legend
 var legend_svg = d3.select("body").append("svg")
 .attr('width',250)
 .attr('height',1000)
 .attr("class", "legend");
-
+// create the svg for the text
 toolbar = legend_svg.append("rect")
 .attr('width',250)
 .attr('height',790)
@@ -20,11 +22,11 @@ toolbar = legend_svg.append("rect")
 .attr('fill','rgb(245, 225, 198)')
 .attr('y',0)
 .attr('x',0);
-
+// create a text grouping
 text = legend_svg.append('g')
 .attr('id','text')
 .style('opacity',0);
-
+// title
 title = text.append("foreignObject")
 .attr("width", 230)
 .attr("height", 30)
@@ -36,6 +38,7 @@ title = text.append("foreignObject")
 .style('background','rgb(245, 225, 198)')
 .style('font-size','18')
 .html("");
+// "influnced by" on the toolbar
 influence = text.append("foreignObject")
 .attr("width", 230)
 .attr("height", 30)
@@ -46,8 +49,7 @@ influence = text.append("foreignObject")
 .style('background','rgb(245, 225, 198)')
 .style('font-size','10')
 .text('influenced by');
-
-
+// the movement that influenced the family
 h_movement = text.append("foreignObject")
 .attr("width", 230)
 .attr("height", 50)
@@ -59,6 +61,7 @@ h_movement = text.append("foreignObject")
 .style('text-align','left')
 .style('font-size','16')
 .html("");
+// the description of the family/movment
 textbox = text.append("foreignObject")
 .attr("width", 220)
 .attr("height", 350)
@@ -78,7 +81,7 @@ d3.select('#influence').style('font-family','Helvetica').style("font-size",'11')
 ordinal = d3.scaleOrdinal()
 .domain(["Germany", "England", "Italy", "France", "UK", "Switzerland", "US"])
 .range([ "rgb(232, 111, 104)", "rgb(184,162,69)", "rgb(60,57,62)", "rgb(166,189,158)", "rgb(156,112,93)","rgb(201,109,28)","rgb(120, 90, 163)"]);
-
+//append the country/color legend
 legend_svg.append("g")
 .attr("class", "legendOrdinal")
 .style('font-family','Helvetica')
@@ -88,20 +91,16 @@ var legendOrdinal = d3.legendColor()
 .shape("path", d3.symbol().type(d3.symbolCircle).size(200)())
 .shapePadding(10)
 .title("Country of Origin")
-//use cellFilter to hide the "e" cell
 .scale(ordinal);
-
 legend_svg.select(".legendOrdinal")
 .call(legendOrdinal);
-
+// create the legend for family/typeface (size legend)
 var size = d3.scaleLinear().range([5,10]);
-
 legend_svg.append("g")
 .attr("class", "legendRadius")
 .style('font-family','Helvetica')
 .style('font-size','15')
 .attr("transform", "translate(30,480)");
-
 var legendSize = d3.legendSize()
 .scale(size)
 .cells(2)
@@ -112,17 +111,13 @@ var legendSize = d3.legendSize()
 .orient('vertical');
 legend_svg.select(".legendRadius")
 .call(legendSize);
-// LEGEND end
-//LEGEND WAYPOINT (STICKY)
-
-
+// Legend design end
+//Legend waypoint (sticky)
 var sticky = new Waypoint.Sticky({
   element: $('.legend')[0],
-
 })
+//color used to highlight the nodes/paths when they are selected
 highlight = "rgb(212, 0, 67)";
-
-
 // Svgs used in waypoint activation
 //Humanism
 var renn_svg = d3.select("body").append("svg")
@@ -215,10 +210,7 @@ fraktur_svg = d3.select("body").append("svg")
 .attr('height',405)
 .attr('id','fraktur')
 .attr("class", "fraktur");
-//Waypoints
-$('.tool_svg')
-.css('opacity', 0) // immediately hide element
-
+//Waypoints for each family
 $('.blackletter')
 .css('opacity', 0) // immediately hide element
 .waypoint(function(direction) {
