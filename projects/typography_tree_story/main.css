@@ -1,4 +1,6 @@
-
+html {
+  width:100%;
+}
 body {
   background-color: rgb(253, 241, 231);
 }
@@ -41,7 +43,7 @@ url("display_fonts/griffo/e0fcf1cc6bed0f55f8a3af18e33479ce.svg#GriffoClassicoW00
 }
 p{
   font-family: Helvetica;
-  font-size: 14;
+  font-size: 2vw;
 }
 h1 {
   font-family: Helvetica;
@@ -52,7 +54,7 @@ h1 {
   text-align: center;
   top: 30%;
   width: 100%;
-  font-size: 4rem;
+  font-size: 5vw;
   color: black;
 }
 div.tooltip {
@@ -75,7 +77,7 @@ ul{
   position: absolute;
   text-align: left;
   top: 35%;
-  font-size: 18px;
+  font-size: 1.3vw;
 }
 #p1 {
   font-family: Helvetica;
@@ -85,7 +87,7 @@ ul{
   position: absolute;
   text-align: left;
   top: 30%;
-  font-size: 18px;
+  font-size: 1.25vw;
 
 }
 

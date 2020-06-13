@@ -6,6 +6,7 @@ screen_height = 9000;
 tree_width = screen_width-400;
 tree_height = screen_height-200;
 var i = 0;
+
 // create the tree given a width and height
 var tree = d3.tree()
 .size([tree_width, tree_height]);
@@ -15,12 +16,13 @@ var diagonal = d3.linkVertical()
 .y(function(d) { return d.y; });
 //create an svg for the tree
 var svg = d3.select("body").append("svg")
-.attr("width",tree_width+195)
 .attr('class','tree')
-.attr("height", screen_height)
+.attr('width',1470)
+.attr('height',9000)
+.attr('transform','translate(150,0)')
 .attr('id','svg')
+.call(responsivefy)
 .append("g")
-.attr("transform", "translate(-60,0)");
 // create a tooltip for the nodes
 var div = d3.select("body").append("div")
 .attr("class", "tooltip")
@@ -35,7 +37,7 @@ svg.append('g')
 .style('font-family','Helvetica')
 .style('font-size','11')
 .style('stroke-width','2px')
-.attr('transform', 'translate(100,0)')
+.attr('transform', 'translate('+80*screen_width/1250 + ',0)')
 .call(d3.axisLeft(yScale).ticks(50).tickFormat(d3.format("d")).tickPadding(6));
 //dictionary for the movements and their descriptions (for the toolbar)
 text_dict = {};
@@ -139,6 +141,12 @@ nodes.forEach(function(d) {
 	if(d.data.name === "Didot"){
 		d.x = d.x - 70 ;
 	}
+	if(d.data.name === "Slab-Serif"){
+		d.x = d.x + 100 ;
+	}
+	if(d.data.name === "Clarendon"){
+		d.x = d.x + 150 ;
+	}
 
 });
 // Declare the nodes
@@ -186,7 +194,7 @@ var node = svg.selectAll("g.node")
 			return -108;
 		}
 		else if (d.data.name === "Scotch-Roman"  ) {
-			return -97;
+			return -82;
 		}
 		else if ( d.data.name === "Serif" ) {
 			return -38;
@@ -199,6 +207,9 @@ var node = svg.selectAll("g.node")
 	.attr("dy", function(d){
 		if( d.data.name === "Didone-Serif"){
 			return -5;
+		}
+		else if (d.data.name === "Scotch-Roman"  ) {
+			return -16;
 		}
 		return ".35em"})
 		.text(function(d){
@@ -272,3 +283,52 @@ var node = svg.selectAll("g.node")
 		.duration(300)
 		.style("opacity", 1e-6);
 	}
+
+	function responsivefy(svg) {
+	// get container + svg aspect ratio
+	var container = d3.select(svg.node().parentNode),
+			width = parseInt(svg.style("width")),
+			height = parseInt(svg.style("height")),
+			aspect = width / height;
+
+	// add viewBox and preserveAspectRatio properties,
+	// and call resize so that svg resizes on inital page load
+	svg.attr("viewBox", "0 0 " + width + " " + height)
+			.attr("preserveAspectRatio", "xMinYMid")
+			.call(resize);
+
+	// to register multiple listeners for same event type,
+	// you need to add namespace, i.e., 'click.foo'
+	// necessary if you call invoke this function for multiple svgs
+	// api docs: https://github.com/mbostock/d3/wiki/Selections#on
+	d3.select(window).on("resize." + container.attr("id"), resize);
+
+	// get width of container and resize svg to fit it
+	function responsivefy(svg) {
+	 // get container + svg aspect ratio
+	 var container = d3.select(svg.node().parentNode),
+			 width = parseInt(svg.style("width")),
+			 height = parseInt(svg.style("height")),
+			 aspect = width / height;
+
+	 // add viewBox and preserveAspectRatio properties,
+	 // and call resize so that svg resizes on inital page load
+	 svg.attr("viewBox", "0 0 " + width + " " + height)
+			 .attr("preserveAspectRatio", "xMinYMid")
+			 .call(resize);
+
+	 // to register multiple listeners for same event type,
+	 // you need to add namespace, i.e., 'click.foo'
+	 // necessary if you call invoke this function for multiple svgs
+	 // api docs: https://github.com/mbostock/d3/wiki/Selections#on
+	 d3.select(window).on("resize." + container.attr("id"), resize);
+
+
+ }
+ // get width of container and resize svg to fit it
+ function resize() {
+		 var targetWidth = parseInt(container.style("width"));
+		 svg.attr("width", targetWidth);
+		 svg.attr("height", Math.round(targetWidth / aspect));
+ }
+}

@@ -10,12 +10,12 @@ legend_w = 180;
 legend_h = 230;
 //create the svg for the legend
 var legend_svg = d3.select("body").append("svg")
-.attr('width',250)
+.attr('width','17vw')
 .attr('height',1000)
 .attr("class", "legend");
 // create the svg for the text
 toolbar = legend_svg.append("rect")
-.attr('width',250)
+.attr('width','100%')
 .attr('height',790)
 .attr('id','toolbar')
 .style('opacity',0)
@@ -25,10 +25,11 @@ toolbar = legend_svg.append("rect")
 // create a text grouping
 text = legend_svg.append('g')
 .attr('id','text')
+.attr('width','100%')
 .style('opacity',0);
 // title
 title = text.append("foreignObject")
-.attr("width", 230)
+.attr("width", '90%')
 .attr("height", 30)
 .attr('y',30)
 .attr('x',0)
@@ -36,22 +37,22 @@ title = text.append("foreignObject")
 .append("xhtml:body")
 .style('text-align','left')
 .style('background','rgb(245, 225, 198)')
-.style('font-size','18')
+.style('font-size','1vm')
 .html("");
 // "influnced by" on the toolbar
 influence = text.append("foreignObject")
-.attr("width", 230)
+.attr("width", '90%')
 .attr("height", 30)
 .attr('y',53)
 .attr('x',0)
 .attr('id','influence')
 .append("xhtml:body")
 .style('background','rgb(245, 225, 198)')
-.style('font-size','10')
+.style('font-size','.8vm')
 .text('influenced by');
 // the movement that influenced the family
 h_movement = text.append("foreignObject")
-.attr("width", 230)
+.attr("width", '100%')
 .attr("height", 50)
 .attr('y',80)
 .attr('x',0)
@@ -59,24 +60,24 @@ h_movement = text.append("foreignObject")
 .append("xhtml:body")
 .style('background','rgb(245, 225, 198)')
 .style('text-align','left')
-.style('font-size','16')
+.style('font-size','1.1vm')
 .html("");
 // the description of the family/movment
 textbox = text.append("foreignObject")
-.attr("width", 220)
+.attr("width", '85%')
 .attr("height", 350)
-.attr('y',130)
+.attr('y',120)
 .attr('x',15)
 .attr('id','textbox')
 .append("xhtml:body")
 .style('background','rgb(245, 225, 198)')
 .style('text-align','left')
-.style('font-size','14')
+.style('font-size','.9vw')
 .html("");
-d3.select('#textbox').style('font-family','Helvetica').style('font-size','14');
-d3.select('#title').style('font-family','Helvetica').style("font-size",'18').style('text-align','center')
-d3.select('#h_movement').style('font-family','Helvetica').style("font-size",'15').style('text-align','center')
-d3.select('#influence').style('font-family','Helvetica').style("font-size",'11').style('text-align','center')
+d3.select('#textbox').style('font-family','Helvetica').style('font-size','.9vw');
+d3.select('#title').style('font-family','Helvetica').style("font-size",'1.2vw').style('text-align','center')
+d3.select('#h_movement').style('font-family','Helvetica').style("font-size",'1.1vw').style('text-align','center')
+d3.select('#influence').style('font-family','Helvetica').style("font-size",'.8vw').style('text-align','center')
 // color/country key
 ordinal = d3.scaleOrdinal()
 .domain(["Germany", "England", "Italy", "France", "UK", "Switzerland", "US"])
@@ -85,8 +86,8 @@ ordinal = d3.scaleOrdinal()
 legend_svg.append("g")
 .attr("class", "legendOrdinal")
 .style('font-family','Helvetica')
-.style('font-size','15')
-.attr("transform", "translate(30,570)");
+.style('font-size','.8vm')
+.attr("transform", "translate(30,550)");
 var legendOrdinal = d3.legendColor()
 .shape("path", d3.symbol().type(d3.symbolCircle).size(200)())
 .shapePadding(10)
@@ -99,8 +100,8 @@ var size = d3.scaleLinear().range([5,10]);
 legend_svg.append("g")
 .attr("class", "legendRadius")
 .style('font-family','Helvetica')
-.style('font-size','15')
-.attr("transform", "translate(30,480)");
+.style('font-size','.8vm')
+.attr("transform", "translate(30,460)");
 var legendSize = d3.legendSize()
 .scale(size)
 .cells(2)
@@ -218,14 +219,14 @@ $('.blackletter')
     $(this.element).animate({ opacity: 1 })
     d3.select('#Black-Letter').transition().style("stroke", highlight).style("stroke-width",'3px').attr("r", 15)
     d3.select('#Black-Letter_path').transition().style("stroke", highlight).style("stroke-width",'3px')
-    d3.select('#toolbar').transition().duration(1500).style("opacity",1)
+    d3.select('#toolbar').transition().duration(100).style("opacity",1)
 
     if (text_dict['Black-Letter']){
       d3.select('#textbox').transition().text(text_dict['Black-Letter'][0])
       d3.select('#title').transition().text('Black-Letter').style('font-family',text_dict['Black-Letter'][2]).style(
         'font-size','22px')
       d3.select('#h_movement').transition().text(text_dict['Black-Letter'][1])
-      d3.select('#text').transition().duration(1500).style("opacity",1)
+      d3.select('#text').transition().duration(100).style("opacity",1)
     }
   }
   else {

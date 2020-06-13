@@ -8,6 +8,7 @@ html, body, div, span, h1, h3, p, a, img, strong, section {
 	font: inherit;
 	vertical-align: baseline;
 	scroll-behavior: smooth;
+	width:100%;
 }
 
 body {
@@ -24,6 +25,7 @@ body {
 	display: inline-flexbox;
 }
 section {
+	width:100%;
 	margin-bottom: 10vh;
 	/* height: 75vh; */
 	align-content: center;
