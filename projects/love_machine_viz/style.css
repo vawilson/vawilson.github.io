@@ -108,7 +108,7 @@ padding-bottom: 50%;
   width: 1.5rem;
   height: 1.5rem;
 
-  background: url('/heart_dark.svg');
+  background: url('heart_dark.svg');
   border: none;
   padding-top: 2px;
   /* position: absolute; */
