@@ -101,7 +101,6 @@ h3 {
   font-size: 14px;
 
 }
-
 .tree {
   position: absolute;
   top: 420px;
@@ -112,15 +111,12 @@ h3 {
   position:absolute;
   right:0;
   top:0;
-
-
-
 }
 .renn {
   position:absolute;
   stroke: 'black';
   opacity: 0;
-  top: 1195px;
+  top: 100vw;
   left:0;
   font-family: Helvetica;
   font-weight: lighter;
@@ -129,7 +125,7 @@ h3 {
 }
 .blackletter {
   position:absolute;
-  top: 800px;
+  top: 40vw;
   right:0;
   font-family: Helvetica;
   font-weight: lighter;
@@ -137,7 +133,7 @@ h3 {
 }
 .transitional {
   position:absolute;
-  top: 3750px;
+  top: 260vw;
   right:0;
   font-family: Helvetica;
   font-weight: lighter;
@@ -146,7 +142,7 @@ h3 {
 .os {
   position:absolute;
   fill: 'white';
-  top: 8800px;
+  top: 600vw;
   left:0;
 }
 .crag {
@@ -158,41 +154,41 @@ h3 {
 }
 .sans {
   position:absolute;
-  top: 4500px;
+  top: 305vw;
   right:0;
 
 }
 .didone {
   position:absolute;
-  top: 5600px;
+  top: 390vw;
   right:0;
 
 }
 .slab{
   position:absolute;
-  top: 6100px;
+  top: 420vw;
   right:0;
 
 }
 .gro{
   position:absolute;
-  top: 6400px;
+  top: 440vw;
   right:0;
 
 }
 .hum{
   position:absolute;
-  top: 7400px;
+  top: 500vw;
   right:0;
 }
 .geo{
   position:absolute;
-  top: 7200px;
+  top: 530vw;
   right:0;
 }
 .neogro{
   position:absolute;
-  top: 7900px;
+  top: 550vw;
   right:0;
 }
 .scotch{
@@ -205,7 +201,7 @@ h3 {
   position:absolute;
   stroke: 'black'
   opacity: 0;
-  top: 1595px;
+  top: 120vw;
   left:0;
   font-family: Helvetica;
   font-weight: lighter;
@@ -215,7 +211,7 @@ h3 {
   position:absolute;
   stroke: 'black'
   opacity: 0;
-  top: 2000px;
+  top: 140vw;
   left:0;
   font-family: Helvetica;
   font-weight: lighter;

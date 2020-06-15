@@ -191,13 +191,13 @@ humanist_svg = d3.select("body").append("svg")
 
 geometic_svg = d3.select("body").append("svg")
 .attr('width',1400)
-.attr('height',915)
+.attr('height',300)
 .attr('id','geo')
 .attr("class", "geo");
 
 neo_grotesque_svg = d3.select("body").append("svg")
 .attr('width',1400)
-.attr('height',405)
+.attr('height',300)
 .attr('id','neogro')
 .attr("class", "neogro");
 
