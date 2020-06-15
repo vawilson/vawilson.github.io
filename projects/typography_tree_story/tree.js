@@ -17,7 +17,7 @@ var diagonal = d3.linkVertical()
 //create an svg for the tree
 var svg = d3.select("body").append("svg")
 .attr('class','tree')
-.attr('width',1470)
+.attr('width',screen_width)
 .attr('height',screen_height*screen_width/1400)
 .attr('transform','translate(150,0)')
 .attr('id','svg')
