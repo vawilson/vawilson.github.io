@@ -1,19 +1,15 @@
-
-start_y = 7350;
-var w = $(document).width();
+var svg = d3.select("#svg");
 var points_svg = d3.select("body").append("svg")
-.attr('width',1168)
 .style('opacity',1)
-.attr('height',800)
 .attr("id", "points");
-var colors = ["rgb(201, 125, 190)","rgb(34, 117, 77)" ,"rgb(232, 111, 104)", "rgb(184,162,69)", "rgb(60,57,62)", "rgb(166,189,158)", "rgb(156,112,93)","rgb(201,109,28)","rgb(120, 90, 163)"];
-var size = [8,16,32,64,64,64,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,64,64,64,32,16,6,6]
+var colors = ["rgb(201, 125, 190)","rgb(52, 117, 77)" ,"rgb(226, 111, 104)", "rgb(184,132,69)", "rgb(60,57,62)", "rgb(136,189,158)", "rgb(156,112,93)","rgb(201,109,28)","rgb(120, 90, 133)"];
+var size = [8,13,26,52,52,52,72,72,72,72,72,72,72,72,72,72,72,72,72,72,72,72,72,72,72,72,72,72,72,72,72,52,52,52,26,13]
 sum = 0;
 for(i in size){
 sum = sum + size[i];
   for(j in [...Array(size[i]).keys()]){
     place = parseInt(j);
-    points_svg.append("circle")
+    svg.append("circle")
     .style('fill',function(f){
     color = colors[Math.floor(Math.random() * colors.length)];
     return color;
@@ -30,7 +26,7 @@ sum = sum + size[i];
         return .2;
       }
     })
-    .attr("cx",(1250*(place/size[i]))+30)
-    .attr('cy',7+(i*15));
+    .attr("cx",(1150*(place/size[i]))+103)
+    .attr('cy',8400+(i*15));
   }
 }

@@ -231,12 +231,7 @@ circle {
   font: 12px sans-serif;
 
 }
-#points {
-  position:absolute;
-  top: 600vw;
-  left:3vw;
-  width: 93%;
-}
+
 .link0, .link1, .link2 {
   fill: none;
   stroke: rgb(70, 10, 20);
