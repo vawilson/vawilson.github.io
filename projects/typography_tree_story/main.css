@@ -170,13 +170,13 @@ h3 {
 }
 .slab{
   position:absolute;
-  top: 6300px;
+  top: 6100px;
   right:0;
 
 }
 .gro{
   position:absolute;
-  top: 6600px;
+  top: 6400px;
   right:0;
 
 }
@@ -235,7 +235,12 @@ circle {
   font: 12px sans-serif;
 
 }
-
+#points {
+  position:absolute;
+  top: 600vw;
+  left:3vw;
+  width: 93%;
+}
 .link0, .link1, .link2 {
   fill: none;
   stroke: rgb(70, 10, 20);

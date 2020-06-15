@@ -1,17 +1,13 @@
 
-
 start_y = 7350;
 var w = $(document).width();
 var points_svg = d3.select("body").append("svg")
 .attr('width',1168)
 .style('opacity',1)
 .attr('height',800)
-.attr("transform", "translate(15,8850)")
-.attr("class", "points");
+.attr("id", "points");
 var colors = ["rgb(201, 125, 190)","rgb(34, 117, 77)" ,"rgb(232, 111, 104)", "rgb(184,162,69)", "rgb(60,57,62)", "rgb(166,189,158)", "rgb(156,112,93)","rgb(201,109,28)","rgb(120, 90, 163)"];
-
 var size = [8,16,32,64,64,64,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,64,64,64,32,16,6,6]
-
 sum = 0;
 for(i in size){
 sum = sum + size[i];

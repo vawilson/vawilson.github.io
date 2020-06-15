@@ -122,7 +122,7 @@ padding-bottom: 50%;
 
 }
 .rangeslider__handle:hover, .rangeslider__handle:active {
-  background: url('/heart_dark.svg');
+  background: url('heart_dark.svg');
   -ms-transform: scale(1.2, 1.2);
   /* IE 9 */
   -webkit-transform: scale(1.2, 1.2);

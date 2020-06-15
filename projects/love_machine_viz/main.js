@@ -238,7 +238,7 @@ var h = $(document).height();
 var q = [];
 
 participants = new Array(196);
-imagePath = "/heart.svg";
+imagePath = "heart.svg";
   svg.selectAll('heart')
   .data(participants)
   .enter()
@@ -255,7 +255,7 @@ function updateCircle(num){
   svg.selectAll('image').attr('class', function(d,i){
     return i < num? 'filtered' : 'non-filtered';})
 	.attr("xlink:href",function(d,i){
-	return i >= num? '/heart_fill.svg' : '/heart.svg';
+	return i >= num? 'heart_fill.svg' : 'heart.svg';
 	});
 
 }
