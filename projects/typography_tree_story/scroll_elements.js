@@ -640,7 +640,7 @@ $('.os')
 .css('opacity', 0) // immediately hide element
 .waypoint(function(direction) {
   if (direction === 'down') {
-    d3.select('#Neo-grotesque-Serif').transition().style("stroke", 'rgb(0,0,0)').style("stroke-width",'1px').attr("r", 10)
+    d3.select('#Neo-grotesque').transition().style("stroke", 'rgb(0,0,0)').style("stroke-width",'1px').attr("r", 10)
     d3.select('#Neo-grotesque_path').transition().style("stroke",'rgb(0,0,0)').style("stroke-width",'1px')
 
     d3.select('#textbox').transition().text(text_dict['OS'][0])
