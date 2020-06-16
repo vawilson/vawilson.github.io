@@ -257,9 +257,9 @@ $('.renn')
     d3.select('#Oldstyle-Serif').transition().style("stroke", "rgb(0,0,0)").style("stroke-width",'1px').attr("r", 10)
     d3.select('#Oldstyle-Serif_path').transition().style("stroke", "rgb(0,0,0)").style("stroke-width",'1px')
     if (text_dict['Black-Letter']){
-      d3.select('#textbox').transition().text(text_dict['Black-Letter'][0])
-      d3.select('#title').transition().text('Black-Letter').style('font-family',text_dict['Black-Letter'][2]).style('font-size','1.5vw')
-      d3.select('#h_movement').transition().text(text_dict['Black-Letter'][1])
+      d3.select('#textbox').transition().text(text_dict['Black-Letter'][0]).style("opacity",1)
+      d3.select('#title').transition().text('Black-Letter').style('font-family',text_dict['Black-Letter'][2]).style('font-size','1.5vw').style("opacity",1)
+      d3.select('#h_movement').transition().text(text_dict['Black-Letter'][1]).style("opacity",1)
       d3.select('#text').transition().style("opacity",1)
     }
 
@@ -280,7 +280,7 @@ $('.script')
 
     if(text_dict['Script']){
 
-      d3.select('#h_movement').transition().text(text_dict['Script'][1])
+      d3.select('#h_movement').transition().text(text_dict['Script'][1]).style("opacity",1)
       d3.select('#title').transition().style("opacity",1).text('Script').style('font-family',text_dict['Script'][2]).style('font-size','1.5vw')
       d3.select('#textbox').transition().style("opacity",1).text(text_dict['Script'][0]).style('font-family','Helvetica')
     }
@@ -294,9 +294,9 @@ $('.script')
     d3.select('#Oldstyle-Serif_path').transition().style("stroke", highlight).style("stroke-width",'3px')
 
     if(text_dict['Oldstyle-Serif']){
-      d3.select('#textbox').transition().text(text_dict['Oldstyle-Serif'][0])
-      d3.select('#title').transition().text('Oldstyle-Serif').style('font-family',text_dict['Oldstyle-Serif'][2]).style('font-size','1.5vw')
-      d3.select('#h_movement').transition().text(text_dict['Oldstyle-Serif'][1])
+      d3.select('#textbox').transition().text(text_dict['Oldstyle-Serif'][0]).style("opacity",1)
+      d3.select('#title').transition().text('Oldstyle-Serif').style('font-family',text_dict['Oldstyle-Serif'][2]).style('font-size','1.5vw').style("opacity",1)
+      d3.select('#h_movement').transition().text(text_dict['Oldstyle-Serif'][1]).style("opacity",1)
       d3.select('#text').transition().style("opacity",1)
     }
 
