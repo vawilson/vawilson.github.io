@@ -236,7 +236,8 @@ var svg = d3.select('svg')
 var w = $(document).width();
 var h = $(document).height();
 var q = [];
-
+console.log(w);
+console.log(h);
 participants = new Array(196);
 imagePath = "heart.svg";
   svg.selectAll('heart')
@@ -245,8 +246,8 @@ imagePath = "heart.svg";
   .append('svg:image')
     .attr('class','non-filtered')
     .attr("xlink:href",imagePath)
-    .attr('width', $(document).width() / 35)
-    .attr('height', $(document).height() /35)
+    .attr('width', $(document).width()* (w/1051)/50)
+    .attr('height', $(document).height()*(h/2708)/50)
     .attr('x', function (d,i) { return (i%14)*(w/30);})
     .attr('y', function (d,i) { return Math.floor(i/14)*(h/47) +10})
 
