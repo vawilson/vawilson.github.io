@@ -246,11 +246,12 @@ imagePath = "heart.svg";
   .append('svg:image')
     .attr('class','non-filtered')
     .attr("xlink:href",imagePath)
-    .attr('width', $(document).width()* (w/1051)/50)
-    .attr('height', $(document).height()*(h/2708)/50)
+    .attr('width', $(document).width()/35)
+    .attr('height', $(document).height()/35)
     .attr('x', function (d,i) { return (i%14)*(w/30);})
-    .attr('y', function (d,i) { return Math.floor(i/14)*(h/47) +10})
-
+    .attr('y', function (d,i) { return Math.floor(i/14)*(h/47)+10})
+svg.attr("viewBox","0 0 800 800")
+		.attr("preserveAspectRatio","xMidYMid meet");
 //update circles by row according to num entered
 function updateCircle(num){
   svg.selectAll('image').attr('class', function(d,i){
