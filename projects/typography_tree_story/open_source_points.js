@@ -12,9 +12,9 @@ for(i in [...Array(Math.floor(ran)).keys()]){
   i  = parseInt(i);
   for(j in [...Array(Math.floor(ran)).keys()]){
     j = parseInt(j);
-    cx = start +j*15;
+    cx = start +screen_width/50+j*15;
     cy = 8400+i*20;
-    if(i<25 && cx>start && cx<=finish+screen_width/50){
+    if(((i<25 && i>6) || (j%3 ==0 && i<29 && i>2)|| (j%2 ==0 && i<28&& i>3)|| (j%5 ==0 && i<27&& i>3)) && (cx>start && cx<=finish+screen_width/30)){
     svg.append("circle")
     .style('fill',function(f){
     color = colors[Math.floor(Math.random() * colors.length)];
@@ -24,7 +24,7 @@ for(i in [...Array(Math.floor(ran)).keys()]){
     .attr("class","oss" + toString(i))
     .style('stroke','rgb(0,0,0,0)')
     .style('opacity',function(f){
-      if(i>6){
+      if(i>5){
        return i*.03;
       }
       else{
