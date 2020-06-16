@@ -11,12 +11,12 @@ legend_h = 230;
 //create the svg for the legend
 var legend_svg = d3.select("body").append("svg")
 .attr('width','17vw')
-.attr('height',1000)
+.attr('height',h)
 .attr("class", "legend");
 // create the svg for the text
 toolbar = legend_svg.append("rect")
 .attr('width','100%')
-.attr('height',790)
+.attr('height','100%')
 .attr('id','toolbar')
 .style('opacity',0)
 .attr('fill','rgb(245, 225, 198)')
