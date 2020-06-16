@@ -218,8 +218,7 @@ $('.blackletter')
 
     if (text_dict['Black-Letter']){
       d3.select('#textbox').transition().text(text_dict['Black-Letter'][0])
-      d3.select('#title').transition().text('Black-Letter').style('font-family',text_dict['Black-Letter'][2]).style(
-        'font-size','22px')
+      d3.select('#title').transition().text('Black-Letter').style('font-family',text_dict['Black-Letter'][2]).style('font-size','1.5vw')
       d3.select('#h_movement').transition().text(text_dict['Black-Letter'][1])
       d3.select('#text').transition().style("opacity",1)
     }
@@ -246,8 +245,7 @@ $('.renn')
     d3.select('#Oldstyle-Serif_path').transition().style("stroke", highlight).style("stroke-width",'3px')
     if(text_dict['Oldstyle-Serif']){
       d3.select('#textbox').transition().text(text_dict['Oldstyle-Serif'][0])
-      d3.select('#title').transition().text('Oldstyle-Serif').style('font-family',text_dict['Oldstyle-Serif'][2]).style(
-        'font-size','22px')
+      d3.select('#title').transition().text('Oldstyle-Serif').style('font-family',text_dict['Oldstyle-Serif'][2]).style('font-size','1.5vw')
       d3.select('#h_movement').transition().text(text_dict['Oldstyle-Serif'][1])
       d3.select('#text').transition().style("opacity",1)
     }
@@ -260,8 +258,7 @@ $('.renn')
     d3.select('#Oldstyle-Serif_path').transition().style("stroke", "rgb(0,0,0)").style("stroke-width",'1px')
     if (text_dict['Black-Letter']){
       d3.select('#textbox').transition().text(text_dict['Black-Letter'][0])
-      d3.select('#title').transition().text('Black-Letter').style('font-family',text_dict['Black-Letter'][2]).style(
-        'font-size','22px')
+      d3.select('#title').transition().text('Black-Letter').style('font-family',text_dict['Black-Letter'][2]).style('font-size','1.5vw')
       d3.select('#h_movement').transition().text(text_dict['Black-Letter'][1])
       d3.select('#text').transition().style("opacity",1)
     }
@@ -284,7 +281,7 @@ $('.script')
     if(text_dict['Script']){
 
       d3.select('#h_movement').transition().text(text_dict['Script'][1])
-      d3.select('#title').transition().style("opacity",1).text('Script').style('font-family',text_dict['Script'][2]).style("font-size",'22')
+      d3.select('#title').transition().style("opacity",1).text('Script').style('font-family',text_dict['Script'][2]).style('font-size','1.5vw')
       d3.select('#textbox').transition().style("opacity",1).text(text_dict['Script'][0]).style('font-family','Helvetica')
     }
   }
@@ -298,8 +295,7 @@ $('.script')
 
     if(text_dict['Oldstyle-Serif']){
       d3.select('#textbox').transition().text(text_dict['Oldstyle-Serif'][0])
-      d3.select('#title').transition().text('Oldstyle-Serif').style('font-family',text_dict['Oldstyle-Serif'][2]).style(
-        'font-size','22px')
+      d3.select('#title').transition().text('Oldstyle-Serif').style('font-family',text_dict['Oldstyle-Serif'][2]).style('font-size','1.5vw')
       d3.select('#h_movement').transition().text(text_dict['Oldstyle-Serif'][1])
       d3.select('#text').transition().style("opacity",1)
     }
@@ -316,8 +312,7 @@ $('.crag')
     d3.select('#Script').transition().style("stroke", 'rgb(0,0,0)').style("stroke-width",'1px').attr("r", 10)
     d3.select('#Script_path').transition().style("stroke",'rgb(0,0,0)').style("stroke-width",'1px')
     d3.select('#h_movement').transition().text("")
-    d3.select('#title').transition().style("opacity",0).text("").style('font-family',"Helvetica").style(
-      'font-size','22px')
+    d3.select('#title').transition().style("opacity",0).text("").style('font-family',"Helvetica").style('font-size','1.5vw')
     d3.select('#textbox').transition().style("opacity",0).text("")
     d3.select('#influence').transition().style("opacity",0)
   }
@@ -326,8 +321,7 @@ $('.crag')
     d3.select('#Fraktur').transition().style("stroke", highlight).style("stroke-width",'3px').attr("r", 15)
     d3.select('#Fraktur_path').transition().style("stroke",highlight).style("stroke-width",'3px')
     d3.select('#h_movement').transition().text(text_dict['Fraktur'][1])
-    d3.select('#title').transition().style("opacity",1).text('Fraktur').style('font-family',text_dict['Fraktur'][2]).style(
-      'font-size','22px')
+    d3.select('#title').transition().style("opacity",1).text('Fraktur').style('font-family',text_dict['Fraktur'][2]).style('font-size','1.5vw')
     d3.select('#textbox').transition().style("opacity",1).text(text_dict['Fraktur'][0]).style('font-family','Helvetica')
     d3.select('#text').transition().style("opacity",1)
     d3.select('#influence').transition().style("opacity",1)
@@ -347,7 +341,7 @@ $('.transitional')
     d3.select('#Transitional-Serif_path').transition().style("stroke", highlight).style("stroke-width",'3px')
     if(text_dict['Transitional-Serif']){
       d3.select('#h_movement').transition().text(text_dict['Transitional-Serif'][1]).style("opacity",1)
-      d3.select('#title').transition().text('Transitional-Serif').style('font-family','Baskerville').style("opacity",1)
+      d3.select('#title').transition().text('Transitional-Serif').style('font-family','Baskerville').style("opacity",1).style('font-size','1.5vw')
       d3.select('#textbox').transition().text(text_dict['Transitional-Serif'][0]).style("opacity",1)
       d3.select('#text').transition().style("opacity",1)
       d3.select('#influence').transition().style("opacity",1)
@@ -358,7 +352,7 @@ $('.transitional')
     d3.select('#Transitional-Serif').transition().style("stroke", "rgb(0,0,0)").style("stroke-width",'1px').attr('r',10)
     d3.select('#Transitional-Serif_path').transition().style("stroke", "rgb(0,0,0)").style("stroke-width",'1px')
     d3.select('#h_movement').transition().text("").style("opacity",0)
-    d3.select('#title').transition().style("opacity",0).text("").style('font-family','Helvetica')
+    d3.select('#title').transition().style("opacity",0).text("").style('font-family','Helvetica').style('font-size','1.5vw')
     d3.select('#textbox').transition().style("opacity",0).text("")
     d3.select('#influence').transition().style("opacity",0)
   }
@@ -377,7 +371,7 @@ $('.sans')
     d3.select('#Sans-Serif_path').transition().style("stroke", highlight).style("stroke-width",'3px')
     if (text_dict['Sans-Serif']){
       d3.select('#textbox').transition().text(text_dict['Sans-Serif'][0])
-      d3.select('#title').transition().text('Sans-Serif').style('font-family','Franklin')
+      d3.select('#title').transition().text('Sans-Serif').style('font-family','Franklin').style('font-size','1.5vw')
       d3.select('#h_movement').transition().text(text_dict['Sans-Serif'][1])
       d3.select('#text').transition().style("opacity",1)
     }
@@ -390,7 +384,7 @@ $('.sans')
     d3.select('#Transitional-Serif_path').transition().style("stroke", highlight).style("stroke-width",'3px')
     if(text_dict['Transitional-Serif']){
       d3.select('#h_movement').transition().text(text_dict['Transitional-Serif'][1])
-      d3.select('#title').transition().text('Transitional-Serif').style('font-family','Baskerville')
+      d3.select('#title').transition().text('Transitional-Serif').style('font-family','Baskerville').style('font-size','1.5vw')
       d3.select('#textbox').transition().text(text_dict['Transitional-Serif'][0])
       d3.select('#text').transition().style("opacity",1)
     }
@@ -410,7 +404,7 @@ $('.didone')
     d3.select('#Didone-Serif_path').transition().style("stroke", highlight).style("stroke-width",'3px')
     if (text_dict['Didone-Serif']){
       d3.select('#textbox').transition().text(text_dict['Didone-Serif'][0])
-      d3.select('#title').transition().text('Didone-Serif').style('font-family',text_dict['Didone-Serif'][2])
+      d3.select('#title').transition().text('Didone-Serif').style('font-family',text_dict['Didone-Serif'][2]).style('font-size','1.5vw')
       d3.select('#h_movement').transition().text(text_dict['Didone-Serif'][1])
       d3.select('#text').transition().style("opacity",1)
     }
@@ -423,7 +417,7 @@ $('.didone')
     d3.select('#Sans-Serif_path').transition().style("stroke", highlight).style("stroke-width",'3px')
     if (text_dict['Sans-Serif']){
       d3.select('#textbox').transition().text(text_dict['Sans-Serif'][0])
-      d3.select('#title').transition().text('Sans-Serif').style('font-family',text_dict['Sans-Serif'][2])
+      d3.select('#title').transition().text('Sans-Serif').style('font-family',text_dict['Sans-Serif'][2]).style('font-size','1.5vw')
       d3.select('#h_movement').transition().text(text_dict['Sans-Serif'][1])
       d3.select('#text').transition().style("opacity",1)
     }
@@ -444,7 +438,7 @@ $('.slab')
     d3.select('#Didone-Serif_path').transition().style("stroke",'rgb(0,0,0)').style("stroke-width",'1px')
     if (text_dict['Slab-Serif']){
       d3.select('#textbox').transition().text(text_dict['Slab-Serif'][0])
-      d3.select('#title').transition().text('Slab-Serif').style('font-family',"Antique")
+      d3.select('#title').transition().text('Slab-Serif').style('font-family',"Antique").style('font-size','1.5vw')
       d3.select('#h_movement').transition().text(text_dict['Slab-Serif'][1])
       d3.select('#text').transition().style("opacity",1)
     }
@@ -459,7 +453,7 @@ $('.slab')
 
     if (text_dict['Didone-Serif']){
       d3.select('#textbox').transition().text(text_dict['Didone-Serif'][0])
-      d3.select('#title').transition().text('Didone-Serif').style('font-family',text_dict['Didone-Serif'][2])
+      d3.select('#title').transition().text('Didone-Serif').style('font-family',text_dict['Didone-Serif'][2]).style('font-size','1.5vw')
       d3.select('#h_movement').transition().text(text_dict['Didone-Serif'][1])
       d3.select('#text').transition().style("opacity",1)
     }
@@ -480,7 +474,7 @@ $('.gro')
 
     if (text_dict['Grotesque']){
       d3.select('#textbox').transition().text(text_dict['Grotesque'][0])
-      d3.select('#title').transition().text('Grotesque').style('font-family','Grotesk')
+      d3.select('#title').transition().text('Grotesque').style('font-family','Grotesk').style('font-size','1.5vw')
       d3.select('#h_movement').transition().text(text_dict['Grotesque'][1])
       d3.select('#text').transition().style("opacity",1)
     }
@@ -493,7 +487,7 @@ $('.gro')
     d3.select('#Grotesque_path').transition().style("stroke",'rgb(0,0,0)').style("stroke-width",'1px')
     if (text_dict['Slab-Serif']){
       d3.select('#textbox').transition().text(text_dict['Slab-Serif'][0])
-      d3.select('#title').transition().text('Slab-Serif').style('font-family',"Antique")
+      d3.select('#title').transition().text('Slab-Serif').style('font-family',"Antique").style('font-size','1.5vw')
       d3.select('#h_movement').transition().text(text_dict['Slab-Serif'][1])
       d3.select('#text').transition().style("opacity",1)
     }
@@ -512,7 +506,7 @@ $('.hum ')
     d3.select('#Humanist_path').transition().style("stroke", highlight).style("stroke-width",'3px')
     if (text_dict['Humanist']){
       d3.select('#textbox').transition().text(text_dict['Humanist'][0])
-      d3.select('#title').transition().text('Humanist').style('font-family',"Verdana")
+      d3.select('#title').transition().text('Humanist').style('font-family',"Verdana").style('font-size','1.5vw')
       d3.select('#h_movement').transition().text(text_dict['Humanist'][1])
       d3.select('#text').transition().style("opacity",1)
     }
@@ -525,7 +519,7 @@ $('.hum ')
     d3.select('#Grotesque_path').transition().style("stroke", highlight).style("stroke-width",'3px')
     if (text_dict['Grotesque']){
       d3.select('#textbox').transition().text(text_dict['Grotesque'][0])
-      d3.select('#title').transition().text('Grotesque').style('font-family','Grotesk')
+      d3.select('#title').transition().text('Grotesque').style('font-family','Grotesk').style('font-size','1.5vw')
       d3.select('#h_movement').transition().text(text_dict['Grotesque'][1])
       d3.select('#text').transition().style("opacity",1)
     }
@@ -546,7 +540,7 @@ $('.geo ')
 
     if (text_dict['Geometric']){
       d3.select('#textbox').transition().text(text_dict['Geometric'][0])
-      d3.select('#title').transition().text('Geometric').style('font-family','Gotham')
+      d3.select('#title').transition().text('Geometric').style('font-family','Gotham').style('font-size','1.5vw')
       d3.select('#h_movement').transition().text(text_dict['Geometric'][1])
       d3.select('#text').transition().style("opacity",1)
     }
@@ -559,7 +553,7 @@ $('.geo ')
     d3.select('#Humanist_path').transition().style("stroke", highlight).style("stroke-width",'3px')
     if (text_dict['Humanist']){
       d3.select('#textbox').transition().text(text_dict['Humanist'][0])
-      d3.select('#title').transition().text('Humanist').style('font-family',"Verdana")
+      d3.select('#title').transition().text('Humanist').style('font-family',"Verdana").style('font-size','1.5vw')
       d3.select('#h_movement').transition().text(text_dict['Humanist'][1])
       d3.select('#text').transition().style("opacity",1)
     }
@@ -580,7 +574,7 @@ $('.neogro ')
 
     if (text_dict['Neo-grotesque']){
       d3.select('#textbox').transition().text(text_dict['Neo-grotesque'][0])
-      d3.select('#title').transition().text('Neo-grotesque').style('font-family','Helvetica')
+      d3.select('#title').transition().text('Neo-grotesque').style('font-family','Helvetica').style('font-size','1.5vw')
       d3.select('#h_movement').transition().text(text_dict['Neo-grotesque'][1])
       d3.select('#text').transition().style("opacity",1)
     }
@@ -593,7 +587,7 @@ $('.neogro ')
     d3.select('#Geometric_path').transition().style("stroke", highlight).style("stroke-width",'3px')
     if (text_dict['Geometric']){
       d3.select('#textbox').transition().text(text_dict['Geometric'][0])
-      d3.select('#title').transition().text('Geometric').style('font-family','Gotham')
+      d3.select('#title').transition().text('Geometric').style('font-family','Gotham').style('font-size','1.5vw')
       d3.select('#h_movement').transition().text(text_dict['Geometric'][1])
       d3.select('#text').transition().style("opacity",1)
     }
@@ -614,7 +608,7 @@ $('.fraktur ')
 
     if (text_dict['Fraktur']){
       d3.select('#textbox').transition().text(text_dict['Fraktur'][0])
-      d3.select('#title').transition().text('Fraktur').style('font-family',text_dict['Fraktur'][2])
+      d3.select('#title').transition().text('Fraktur').style('font-family',text_dict['Fraktur'][2]).style('font-size','1.5vw')
       d3.select('#h_movement').transition().text(text_dict['Fraktur'][1])
       d3.select('#text').transition().style("opacity",1)
     }
@@ -627,7 +621,7 @@ $('.fraktur ')
     d3.select('#Script').transition().style("stroke", highlight).style("stroke-width",'3px')
     if (text_dict['Script']){
       d3.select('#textbox').transition().text(text_dict['Script'][0])
-      d3.select('#title').transition().text('Script').style('font-family',text_dict['Script'][1])
+      d3.select('#title').transition().text('Script').style('font-family',text_dict['Script'][1]).style('font-size','1.5vw')
       d3.select('#h_movement').transition().text(text_dict['Script'][1])
       d3.select('#text').transition().style("opacity",1)
     }
@@ -644,7 +638,7 @@ $('.os')
     d3.select('#Neo-grotesque_path').transition().style("stroke",'rgb(0,0,0)').style("stroke-width",'1px')
 
     d3.select('#textbox').transition().text(text_dict['OS'][0])
-    d3.select('#title').transition().text('Open Source Fonts').style('font-family','Helvetica')
+    d3.select('#title').transition().text('Open Source Fonts').style('font-family','Helvetica').style('font-size','1.5vw')
     d3.select('#h_movement').transition().text(text_dict['OS'][1])
     d3.select('#text').transition().style("opacity",1)
 
@@ -654,7 +648,7 @@ $('.os')
     d3.select('#Neo-grotesque_path').transition().style("stroke", highlight).style("stroke-width",'3px')
     if (text_dict['Neo-grotesque']){
       d3.select('#textbox').transition().text(text_dict['Neo-grotesque'][0])
-      d3.select('#title').transition().text('Neo-grotesque').style('font-family','Helvetica')
+      d3.select('#title').transition().text('Neo-grotesque').style('font-family','Helvetica').style('font-size','1.5vw')
       d3.select('#h_movement').transition().text(text_dict['Neo-grotesque'][1])
       d3.select('#text').transition().style("opacity",1)
     }
