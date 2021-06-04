@@ -110,7 +110,7 @@ h3 {
 .legend {
   position:absolute;
   right:0;
-  top:0;
+  top:0%;
 }
 .renn {
   position:absolute;
@@ -219,7 +219,7 @@ h3 {
 }
 .stuck {
   position:fixed;
-  bottom:0;
+  bottom:0%;
 }
 
 circle {

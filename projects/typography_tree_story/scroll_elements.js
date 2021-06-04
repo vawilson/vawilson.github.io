@@ -37,7 +37,7 @@ title = text.append("foreignObject")
 .append("xhtml:body")
 .style('text-align','left')
 .style('background','rgb(245, 225, 198)')
-.style('font-size','1vm')
+.style('font-size','1vh')
 .html("");
 // "influnced by" on the toolbar
 influence = text.append("foreignObject")
@@ -48,7 +48,7 @@ influence = text.append("foreignObject")
 .attr('id','influence')
 .append("xhtml:body")
 .style('background','rgb(245, 225, 198)')
-.style('font-size','.8vm')
+.style('font-size','1vh')
 .text('influenced by');
 // the movement that influenced the family
 h_movement = text.append("foreignObject")
@@ -60,7 +60,7 @@ h_movement = text.append("foreignObject")
 .append("xhtml:body")
 .style('background','rgb(245, 225, 198)')
 .style('text-align','left')
-.style('font-size','1.1vm')
+.style('font-size','1vh')
 .html("");
 // the description of the family/movment
 textbox = text.append("foreignObject")
@@ -72,12 +72,12 @@ textbox = text.append("foreignObject")
 .append("xhtml:body")
 .style('background','rgb(245, 225, 198)')
 .style('text-align','left')
-.style('font-size','.9vw')
+.style('font-size','.8vh')
 .html("");
-d3.select('#textbox').style('font-family','Helvetica').style('font-size','.9vw');
-d3.select('#title').style('font-family','Helvetica').style("font-size",'1.2vw').style('text-align','center')
-d3.select('#h_movement').style('font-family','Helvetica').style("font-size",'1.1vw').style('text-align','center')
-d3.select('#influence').style('font-family','Helvetica').style("font-size",'.8vw').style('text-align','center')
+d3.select('#textbox').style('font-family','Helvetica').style('font-size','2vh');
+d3.select('#title').style('font-family','Helvetica').style("font-size",'3vh').style('text-align','center')
+d3.select('#h_movement').style('font-family','Helvetica').style("font-size",'2vh').style('text-align','center')
+d3.select('#influence').style('font-family','Helvetica').style("font-size",'3vh').style('text-align','center')
 // color/country key
 ordinal = d3.scaleOrdinal()
 .domain(["Germany", "England", "Italy", "France", "UK", "Switzerland", "US"])
@@ -86,8 +86,8 @@ ordinal = d3.scaleOrdinal()
 legend_svg.append("g")
 .attr("class", "legendOrdinal")
 .style('font-family','Helvetica')
-.style('font-size','.8vm')
-.attr("transform", "translate(30,550)");
+.style('font-size','1.5vh')
+.attr("transform", "translate(30," + .73*h+")");
 var legendOrdinal = d3.legendColor()
 .shape("path", d3.symbol().type(d3.symbolCircle).size(200)())
 .shapePadding(10)
@@ -100,8 +100,8 @@ var size = d3.scaleLinear().range([5,10]);
 legend_svg.append("g")
 .attr("class", "legendRadius")
 .style('font-family','Helvetica')
-.style('font-size','.8vm')
-.attr("transform", "translate(30,460)");
+.style('font-size','1.5vh')
+.attr("transform", "translate(30," + .6*h+")");
 var legendSize = d3.legendSize()
 .scale(size)
 .cells(2)
